@@ -1,0 +1,112 @@
+<?php
+// mensaje de resultado de configuracion en el home
+// function moduloigp_init(){
+// 	if(drupal_is_front_page()){
+// 	    drupal_set_message(t("Hola mundo! que brujeria es esto?"));
+// 	}
+// }
+
+
+/**
+* Implements hook_permission().
+*Permisos (icono)
+*/
+
+function moduloigp_permission() {
+	return array(
+	'administer moduloigp settings' => array(
+	'title' => t('Administer moduloigp configurations'),
+	'restrict access' => true,
+	)
+	);
+}
+
+
+/**
+* Formulario de configuración (no funciona)
+*
+* @return array The form structure.
+*/
+function moduloigp_admin() {
+$form = array();
+
+// Algo que configurar
+$form['moduloigp_something'] = array(
+'#type' => 'textfield',
+'#title' => t('Something'),
+'#default_value' => variable_get(‘moduloigp_something’, ""),
+'#size' => 60,
+'#maxlength' => 250,
+'#description' => t("Something"),
+'#required' => TRUE,
+);
+
+return system_settings_form($form);
+}
+
+/**
+* Implements hook_help().
+* Implements ayuda del modulo().
+*/
+function moduloigp_help ( $path, $arg )
+{
+  $output=''; // para construir la salida
+  switch ( $path )
+  {
+    case 'admin/help#moduloigp':
+      $output .= '<p>' . t('Este es el sector de ayuda para el módulo de prueba para el cndg...') . '</p>';
+      break;
+  }
+  return $output;
+}
+
+/**
+* Implementation of hook_block().
+* Bloques
+*/
+function moduloigp_block ( $op = 'list', $delta = 0, $edit = array() )
+{
+  if ( $op == "list")
+  {
+      $blocks = array();
+      $blocks[0]["info"] = t('moduloigp');
+      $blocks[1]["info"] = t('New moduloigps');
+      return $blocks;
+  }
+  else if ( $op == "view" )
+  {
+      $content = '';
+      $block = array();
+      switch ( $delta )
+      {
+        case 0:
+          $block['subject'] = t('moduloigp');
+
+          $options = array( "attributes" => array("title" => t("Sends a moduloigp message") ) );
+          $link = l( t("New moduloigp"), "moduloigp/message", $options );
+          $content .= '<div class="link">' . $link . "</div>";
+          break;
+        case 1:
+          $block['subject'] = t('moduloigp Messages');
+
+          $options = array( "attributes" => array("title" => t("Shows moduloigp messages") ) );
+          $title = t("There are @total new feeds", array ( '@total' => _moduloigp_count() ) );
+          $link = l( $title , "moduloigp/adminmessages", $options );
+          $content .= '<div class="link">' . $link . "</div>";
+          break;
+      }
+      $block['content'] = $content;
+      return $block;
+  }
+}
+
+/*Creacion de formularios*/
+
+function moduloigp_message ()
+{
+  $content = '';
+
+  $content .= drupal_get_form ( 'moduloigp_message_form' );
+
+  return $content;
+}

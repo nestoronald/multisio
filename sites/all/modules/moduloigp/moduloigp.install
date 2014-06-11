@@ -1,0 +1,51 @@
+<?php
+function moduloigp_schema ()
+{
+  $schema['moduloigp_messages'] = array
+  (
+    'description' => t('Tabla para mensajes de retroalimentacion'),
+    'fields' => array
+    (
+      'id' => array
+      (
+        'description' => t('Identificador de mensaje'),
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'uid' => array
+      (
+        'description' => t('Identificador del usuario que realiza el moduloigp'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+      ),
+      'message' => array
+      (
+        'description' => t('Mensaje de moduloigp'),
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+      'indate' => array
+      (
+        'description' => t('Fecha en la que se crea el comentario'),
+        'type' => 'datetime',
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}
+
+
+function moduloigp_install() {
+  // Create my tables.
+  drupal_install_schema('moduloigp');
+}
+
+function moduloigp_uninstall() {
+  // Drop my tables.
+  drupal_uninstall_schema('moduloigp');
+}
+?>
