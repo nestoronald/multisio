@@ -159,6 +159,15 @@
                                         <h3>Desarrollo de Aplicaciones web</h3>
                                     </div>
                                 </li>
+                                <li class="slider-item">
+                                    <div class="slider-image">
+                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/slider-team2.jpg" alt="" /></a>
+                                    </div>
+                                    <div class="flex-caption">
+                                        <h3>Equipo de trabajo</h3>
+                                    </div>
+                                </li>
+
 
                             </ul>
                         </div>
