@@ -171,3 +171,7 @@ ul#projects-carousel_1 li .item-content p {
     height: 25px;
 }
 /*fin carousel-1*/
+
+.menu a.active-trail.active {
+color: #9dcedf;
+}

@@ -124,7 +124,7 @@
 
                 <?php if (theme_get_setting('slideshow_display','simplecorp')): ?>
 
-                    <!--?php if ($is_front): ?-->
+                    <?php if ($is_front): ?>
                     <!-- #slider-container -->
                     <div id="slider-container">
                         <div class="flexslider loading">
@@ -173,7 +173,7 @@
                         </div>
                     </div>
                     <!-- EOF: #slider-container -->
-                    <!--?php endif; ?-->
+                    <?php endif; ?>
 
                 <?php endif; ?>
 
