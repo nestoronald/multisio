@@ -1,0 +1,32 @@
+/*Estilos general para platilla base IGP*/
+/*Features IGP*/
+.one-half{
+    background: #ededed;
+    border-radius: 6px;
+    width: 30%;
+    padding: 0.3em 0.4em;
+    height: 255px;
+}
+.one-half-last{
+    width: 32%;
+    margin-right: 0;
+}
+.img-align-right {margin: 1em 10px 10px 0; float: right;}
+#featured .one-half a h3 { color: #40b4e3;}
+#header-igp { position: relative; padding: 1.2em 0;}
+#social-icons {
+    background: #9dcedf;
+    margin-bottom: 10px;
+}
+.flex-control-nav, .flex-direction-nav{
+    display: none;
+}
+#slider-container {
+    margin-bottom: 0;
+    border: 0;
+    padding-bottom: 0;
+}
+#logo-igp{
+    right: 0;
+    position: absolute;
+}

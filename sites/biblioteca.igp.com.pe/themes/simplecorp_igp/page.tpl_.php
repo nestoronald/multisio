@@ -17,12 +17,22 @@
                 <?php if ($page['header']) :?>
                 <?php print render($page['header']); ?>
                 <?php endif; ?>
-                <div id="header-igp">
-                    <div id="logo-minam">
-                        <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/logo-minan-igp_2012.png">
+
+                <?php if (theme_get_setting('social_icons_display','simplecorp')): ?>
+                    <!-- #social-icons -->
+                    <div id="social-icons" class="clearfix">
+
+
+
+                        <div id="header-igp">
+                        <div id="logo-minam">
+                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/logo-minan-igp_2012.png">
+                        </div>
+                        <div id="logo-igp"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/igp-trans.png"></div>
+                        </div>
                     </div>
-                    <div id="logo-igp"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/igp-trans.png"></div>
-                </div>
+                    <!-- EOF: #social-icons -->
+                <?php endif; ?>
 
             </div>
             <!-- EOF: #pre-header -->
@@ -30,6 +40,7 @@
 
             <!-- #header -->
             <div id="header" class="clearfix">
+
 
                 <!-- #header-left -->
                 <div id="header-left" class="one-third">
@@ -113,7 +124,7 @@
 
                 <?php if (theme_get_setting('slideshow_display','simplecorp')): ?>
 
-                    <?php if ($is_front): ?>
+                    <!--?php if ($is_front): ?-->
                     <!-- #slider-container -->
                     <div id="slider-container">
                         <div class="flexslider loading">
@@ -122,60 +133,38 @@
                                 <!-- first-slide -->
                                 <li class="slider-item">
                                     <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/slider-team1.jpg" alt="" /></a>
+                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img1.jpg" alt="" /></a>
                                     </div>
                                     <div class="flex-caption">
-                                        <h3>Equipo de trabajo</h3>
+                                        <h3>Service 1</h3>
                                     </div>
                                 </li>
 
                                 <!-- second-slide -->
                                 <li class="slider-item">
                                     <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/slider-datacenter.jpg" alt="" /></a>
+                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img2.jpg" alt="" /></a>
                                     </div>
                                     <div class="flex-caption">
-                                        <h3>Redes y Comunicaciones</h3>
+                                        <h3>Service 2</h3>
                                     </div>
                                 </li>
 
                                 <!-- third-slide -->
                                 <li class="slider-item">
                                     <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/slider-development.jpg" alt="" /></a>
+                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img3.jpg" alt="" /></a>
                                     </div>
                                     <div class="flex-caption">
-                                        <h3>Desarrollo de Aplicaciones web</h3>
+                                        <h3>Service 3</h3>
                                     </div>
                                 </li>
-                                <li class="slider-item">
-                                    <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/slider-team2.jpg" alt="" /></a>
-                                    </div>
-                                    <div class="flex-caption">
-                                        <h3>Equipo de trabajo</h3>
-                                    </div>
-                                </li>
-
 
                             </ul>
                         </div>
                     </div>
                     <!-- EOF: #slider-container -->
-                    <?php endif; ?>
-
-                    <?php if (theme_get_setting('social_icons_display','simplecorp')): ?>
-                        <!-- #social-icons -->
-                        <div id="social-icons" class="clearfix">
-                            <ul id="social-links">
-                                <li class="facebook-link"><a href="https://www.facebook.com/morethan.just.themes" class="facebook" id="social-01" title="Join Us on Facebook!">Facebook</a></li>
-                                <li class="twitter-link"><a href="https://twitter.com/morethanthemes" class="twitter" id="social-02" title="Follow Us on Twitter">Twitter</a></li>
-                                <li class="google-link"><a href="#" id="social-03" title="Google" class="google">Google</a></li>
-                                <li class="dribbble-link"><a href="#" id="social-04" title="Dribble" class="dribbble">Dribble</a></li>
-                            </ul>
-                        </div>
-                        <!-- EOF: #social-icons -->
-                    <?php endif; ?>
+                    <!--?php endif; ?-->
 
                 <?php endif; ?>
 
@@ -206,9 +195,9 @@
 
                         <!--featured-item -->
                         <div class="one-half">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/doc-admin.jpg" class="img-align-right" alt="" />
-                            <a href="./node/6"><h3>Documentos de gestión / procesos</h3></a>
-                            <p>Se encarga de modelar procesos con la finalidad de optimizar las actividades de gestión o desarrollo.</p>
+                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-01.png" class="img-align-left" alt="" />
+                            <a href="./node/6"><h3>Destacado 1</h3></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque fugit possimus ipsa sed dicta eos, delectus numquam, aliquid repellat? Aliquam.</p>
                             <div class="readmore">
                                 <a href="./node/6">Leer mas</a>
                             </div>
@@ -216,21 +205,25 @@
                         <!--EOF: featured-item -->
 
                         <!--featured-item -->
-                        <div class="one-half">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/desarrollo.jpg" class="img-align-right" alt="" />
-                            <a href="./node/4"><h3>Programación y desarrollo</h3></a>
-                            <p>Se encarga desarrollar diferentes herramientas y aplicativos web, que permiten atender servicios administrativos y  técnicos.</p>
+                        <div class="one-half last">
+                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-02.png" class="img-align-left" alt="" />
+                            <a href="./node/4"><h3>Destacado 2</h3></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo alias cupiditate, laudantium veniam dolores quidem tempora vero repudiandae totam?.</p>
                             <div class="readmore">
                                 <a href="./node/4">Leer mas</a>
                             </div>
                         </div>
                         <!--EOF: featured-item -->
 
+                    </div>
+
+                    <div class="container clearfix">
+
                         <!--featured-item -->
-                        <div class="one-half one-half-last">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/admin-redes.png" class="img-align-right" alt="" />
-                            <a href="./node/5"><h3>Administración de redes</h3></a>
-                            <p>Se encarga de planificar y ejecutar técnicas para mantener la red operativa, eficiente, segura, constantemente monitoreada.</p>
+                        <div class="one-half">
+                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-03.png" class="img-align-left" alt="" />
+                            <a href="./node/5"><h3>Destacado 3</h3></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae recusandae maiores ab laborum cumque aliquam, quia vel eius dolore quidem cum ex.</p>
                             <div class="readmore">
                                 <a href="./node/5">Leer mas</a>
                             </div>
@@ -238,10 +231,10 @@
                         <!--EOF: featured-item -->
 
                         <!--featured-item -->
-                        <div class="one-half">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-01.jpg" class="img-align-right" alt="" />
-                            <a href="./node/3"><h3>Servicios informáticos</h3></a>
-                            <p>Se encarga de planificar, evaluar y analizar  permanentemente los equipos y aplicaciones a nivel de software con que cuenta el IGP.</p>
+                        <div class="one-half last">
+                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-04.png" class="img-align-left" alt="" />
+                            <a href="./node/3"><h3>Destacado 4</h3></a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus accusamus a, ratione dolorem ducimus culpa. Ullam, adipisci, eaque! Placeat nam veniam ex cumque.</p>
                             <div class="readmore">
                                 <a href="./node/3">Leer mas</a>
                             </div>
@@ -320,7 +313,7 @@
 
                     <?php if ($is_front): ?>
 
-                    <h3>Aplicaciones web</h3>
+                    <h3>Bibliotecas </h3>
 
                     <ul id="projects-carousel" class="projects-carousel loading">
 
@@ -334,14 +327,14 @@
                                         <div class="portfolio-item-holder">
                                             <div class="portfolio-item-hover-content">
 
-                                               <img src="<?php print base_path() ;?>/sites/default/files/images/modulo-inventario.jpg" alt="" width="220"  class="portfolio-img" />
+                                               <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/roj-logo.jpg" alt="" width="220"  class="portfolio-img" />
 
                                                 <!-- <div class="hover-options"></div> -->
                                             </div>
                                         </div>
                                         <div class="description">
                                             <p>
-                                                 Inventario de Equipos informáticos
+                                                 Radio Observatorio de Jicamarca
                                             </p>
 
                                         </div>
@@ -355,13 +348,13 @@
                                     <a href="http://www.igp.gob.pe/cndgdocs/" target="_blank" title="Ir al módulo repositorio de documentos ">
                                         <div class="portfolio-item-holder">
                                             <div class="portfolio-item-hover-content">
-                                               <img src="<?php print base_path() ;?>/sites/default/files/images/repository-document.jpg" alt="" width="220"  class="portfolio-img" />
+                                               <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/igp-hcyo-logo.jpg" alt="" width="220"  class="portfolio-img" />
                                                 <!-- <div class="hover-options"></div> -->
                                             </div>
                                         </div>
                                         <div class="description">
                                             <p>
-                                                 Repositorio de documentos
+                                                 Observatorio de Huancayo
                                             </p>
 
                                         </div>
@@ -376,14 +369,14 @@
                                         <div class="portfolio-item-holder">
                                             <div class="portfolio-item-hover-content">
 
-                                               <img src="<?php print base_path() ;?>/sites/default/files/images/ip-network.jpg" alt="" width="220"  class="portfolio-img" />
+                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/igp-arequipa-logo.jpg" alt="" width="220"  class="portfolio-img" />
 
                                                 <!-- <div class="hover-options"></div> -->
                                             </div>
                                         </div>
                                         <div class="description">
                                             <p>
-                                                 Base de datos direcciones IP
+                                                 Observatorio de Arequipa
                                             </p>
 
                                         </div>
@@ -394,18 +387,18 @@
                         <li>
                             <div class="item-content">
                                 <div class="link-holder">
-                                    <a href="http://www.igp.gob.pe/sysppr" target="_blank" title="Ir al módulo PPR ">
+                                    <a href="http://www.ipen.gob.pe/site/capa_nuclear/A-serv_bibliog.html" target="_blank" title="Ir al módulo PPR ">
                                         <div class="portfolio-item-holder">
                                             <div class="portfolio-item-hover-content">
 
-                                               <img src="<?php print base_path() ;?>/sites/default/files/images/modulo-ppr.jpg" alt="" width="220"  class="portfolio-img" />
+                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/ipen_logo.jpg" alt="" width="220"  class="portfolio-img" />
 
                                                 <!-- <div class="hover-options"></div> -->
                                             </div>
                                         </div>
                                         <div class="description">
                                             <p>
-                                                 Módulo de PPR
+                                                 IPEN
                                             </p>
 
                                         </div>
@@ -416,18 +409,18 @@
                         <li>
                             <div class="item-content">
                                 <div class="link-holder">
-                                    <a href="http://10.10.30.17/atenciones/" target="_blank" title="Ir al módulo de atención a usuarios ">
+                                    <a href="http://www.senamhi.gob.pe/?p=0606" target="_blank" title="Ir a la biblioteca ">
                                         <div class="portfolio-item-holder">
                                             <div class="portfolio-item-hover-content">
 
-                                               <img src="<?php print base_path() ;?>/sites/default/files/images/atencion-usuarios.jpg" alt="" width="220"  class="portfolio-img" />
+                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/senamhi_logo.jpg" alt="" width="220"  class="portfolio-img" />
 
                                                 <!-- <div class="hover-options"></div> -->
                                             </div>
                                         </div>
                                         <div class="description">
                                             <p>
-                                                 Módulo de atención a usuarios
+                                                 SENAMHI
                                             </p>
 
                                         </div>
@@ -438,48 +431,18 @@
                         <li>
                             <div class="item-content">
                                 <div class="link-holder">
-                                    <a href="http://www.igp.gob.pe/listado_personal/" target="_blank" title="Ir al módulo listado de personal ">
+                                    <a href="http://bvcyt.concytec.gob.pe/" target="_blank" title="Ir a la biblioteca de Concytec ">
                                         <div class="portfolio-item-holder">
                                             <div class="portfolio-item-hover-content">
 
-                                               <img src="<?php print base_path() ;?>/sites/default/files/images/personal.jpg" alt="" width="220"  class="portfolio-img" />
+                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/concytec_logo.jpg" alt="" width="220"  class="portfolio-img" />
 
                                                 <!-- <div class="hover-options"></div> -->
                                             </div>
                                         </div>
                                         <div class="description">
                                             <p>
-                                                 Listado de personal
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-
-
-                    </ul>
-                    <h3>Enlaces de interés</h3>
-                    <ul id="projects-carousel_1" class="projects-carousel loading">
-
-                        <!-- PROJECT ITEM STARTS -->
-                        <!-- calendario SUM-->
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="/cndg/anexos-numeros-telefonicos-personal-igp" title="Ver anexos y números telefónicos ">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path() ;?>/sites/default/files/images/listado-telefonos.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                 Listado de anexos y números telefónicos
+                                                 CONCYTEC
                                             </p>
 
                                         </div>
@@ -490,106 +453,18 @@
                         <li>
                             <div class="item-content">
                                 <div class="link-holder">
-                                    <a href="http://10.10.30.17/calendariosum/" target="_blank" title="Ir al módulo calendario SUM ">
+                                    <a href="http://www.imarpe.pe/imarpe/index.php?id_seccion=I0115000000000000000000" target="_blank" title="Ir a la biblioteca de IMARPE ">
                                         <div class="portfolio-item-holder">
                                             <div class="portfolio-item-hover-content">
 
-                                               <img src="<?php print base_path() ;?>/sites/default/files/images/calendariosum.jpg" alt="" width="220"  class="portfolio-img" />
+                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/imarpe_logo.jpg" alt="" width="220"  class="portfolio-img" />
 
                                                 <!-- <div class="hover-options"></div> -->
                                             </div>
                                         </div>
                                         <div class="description">
                                             <p>
-                                                 Calendario SUM
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://bndg.igp.gob.pe/bd" target="_blank" title="Ir a la base de datos geofísicos">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path() ;?>/sites/default/files/images/bd-geofisicos.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                 Base de datos geofísicos
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://sic.igp.gob.pe/webshared" target="_blank">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path();?>/sites/default/files/images/sic-igp.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                Sistema de información compartida(SIC)
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://www.igp.gob.pe/formulario-recursos-internet/" target="_blank" title="Formato de uso de recursos y servicios de internet">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path();?>/sites/default/files/images/modulo-recursos-internet.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                Formato de uso de recursos y servicios de internet
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://www.igp.gob.pe/listado_instructivos/" target="_blank" title="Listado de Instructivos">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path();?>/sites/default/files/images/instructivos.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                Listado de instructivos
+                                                 IMARPE
                                             </p>
 
                                         </div>

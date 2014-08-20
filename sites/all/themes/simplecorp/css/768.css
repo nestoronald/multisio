@@ -1,4 +1,4 @@
-﻿  
+﻿
 /*-------------------------------------------*/
 /* #Tablet (Portrait)*/
 /*-------------------------------------------*/
@@ -9,13 +9,15 @@
 /*--------------------------------------*/
 .container { width: 708px; }
 
-.one-half { width: 324px; }
+.one-half { width: 204px; height:410px }/* 324px*/
+
+.one-half .img-align-right { width: 80%; }
 
 .one-third { width: 222px; }
 
 .two-third { width: 464px; }
 
-.one-fourth { width: 162px; }	
+.one-fourth { width: 162px; }
 
 .three-fourth { width: 526px; }
 
@@ -34,7 +36,7 @@ position: relative; text-align: center; text-transform:uppercase; }
 /*--------------------------------------*/
 /*BODY LAYOUT*/
 /*--------------------------------------*/
-#page { height:auto;  width:748px; background:#FFF; -webkit-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20); -moz-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20);  
+#page { height:auto;  width:748px; background:#FFF; -webkit-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20); -moz-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20);
 box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20); padding:0px; margin:20px auto 0; float:none; }
 
 #footer{ width:auto;  padding:30px 0px 0; margin:0px;  height:auto; background:#222222;	}
@@ -53,7 +55,7 @@ box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20); padding:0px; margin:20px auto 0; 
 #footer-form textarea,
 #footer-form select { width: 152px; }
 
-#call-to-action-panel h1{ font-size:28px; line-height:28px; }  
+#call-to-action-panel h1{ font-size:28px; line-height:28px; }
 
 /*--------------------------------------*/
 /*INTRO PAGE IMG */
@@ -76,7 +78,7 @@ img.intro-img { margin-left:-20px!important; max-width:748px!important; max-heig
 .button.huge { padding:10px 20px; font-size: 16px; color:#FFF!important; font-weight:bold; }
 
 /*--------------------------------------*/
-/*HOMEPAGE PORTFOLIO CAROUSEL*/	
+/*HOMEPAGE PORTFOLIO CAROUSEL*/
 /*--------------------------------------*/
 ul#projects-carousel li {  width:158px; }
 
@@ -90,7 +92,7 @@ ul#projects-carousel li .item-content{  width:158px; }
 /*--------------------------------------*/
 /*PORTFOLIO LAYOUTS*/
 /*--------------------------------------*/
-.portfolio-container{width:728px;margin-right:-20px;float:left;} 
+.portfolio-container{width:728px;margin-right:-20px;float:left;}
 
 ul#portfolio-items-one-fourth {overflow: hidden;position: relative;list-style: none;margin: 0;padding: 0px 0 0 0 ;	}
 
@@ -104,11 +106,11 @@ ul#portfolio-items-one-fourth li  .item-content{background:#615951;float:left;wi
 
 ul#portfolio-items-one-fourth li .item-content:hover{ background:#9dcedf;}
 
-ul#portfolio-items-one-fourth li .item-content p{margin:0;padding:0;font-weight:800;color:#FFF;} 
+ul#portfolio-items-one-fourth li .item-content p{margin:0;padding:0;font-weight:800;color:#FFF;}
 
-ul#portfolio-items-one-fourth li .item-content p a{margin:0;padding:0;font-weight:800;color:#FFF;} 
+ul#portfolio-items-one-fourth li .item-content p a{margin:0;padding:0;font-weight:800;color:#FFF;}
 
-ul#portfolio-items-one-fourth li  .item-content span{font-style:italic;color:#FFF;} 
+ul#portfolio-items-one-fourth li  .item-content span{font-style:italic;color:#FFF;}
 
 ul#portfolio-items-one-fourth li   img{ width:100%;height:auto;padding:0;margin:0; }
 
@@ -124,11 +126,11 @@ ul#portfolio-items-one-third li .item-content{background:#615951;float:left;widt
 
 ul#portfolio-items-one-third li .item-content:hover{ background:#9dcedf;}
 
-ul#portfolio-items-one-third li .item-content p{margin:0;padding:0;font-weight:800;color:#FFF;} 
+ul#portfolio-items-one-third li .item-content p{margin:0;padding:0;font-weight:800;color:#FFF;}
 
-ul#portfolio-items-one-third li .item-content p a{margin:0;padding:0;font-weight:800;color:#FFF;} 
+ul#portfolio-items-one-third li .item-content p a{margin:0;padding:0;font-weight:800;color:#FFF;}
 
-ul#portfolio-items-one-third li .item-content span{font-style:italic;color:#FFF;} 
+ul#portfolio-items-one-third li .item-content span{font-style:italic;color:#FFF;}
 
 ul#portfolio-items-one-third li  img{ width:100%;height:auto;padding:0;margin:0; }
 
@@ -144,11 +146,11 @@ ul#portfolio-items-one-third li  img{ width:100%;height:auto;padding:0;margin:0;
 
 .portfolio-items-not-filterable li { width: 236px!important; margin: 0 20px 0px 0!important; float: left;  height: 260px!important; overflow: hidden; }
 
-#filterable  { display: inline; float: right;  margin-bottom: 20px; margin-right:0px;  } 
+#filterable  { display: inline; float: right;  margin-bottom: 20px; margin-right:0px;  }
 
 #filterable li { float: left; margin-left: 15px; }
 
-.inner-page-intro h2 { font-size:21px; line-height:24px; } 
+.inner-page-intro h2 { font-size:21px; line-height:24px; }
 
 #contact-map { margin: 0px 0 30px -20px;  position: relative; width: 748px; }
 
