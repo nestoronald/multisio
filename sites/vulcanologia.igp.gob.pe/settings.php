@@ -215,7 +215,7 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => 'db_igp',
+      'database' => 'db_vulcanologia',
       'username' => 'wmaster',
       'password' => 'igpwmaster',
       'host' => 'localhost',
