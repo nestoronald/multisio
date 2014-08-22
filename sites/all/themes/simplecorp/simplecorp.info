@@ -11,7 +11,6 @@ stylesheets[all and (max-width: 479px)][] = css/320.css
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/plugins/flexslider.css
 stylesheets[all][] = css/local.css
-stylesheets[all][] = css/simplecorp-main.css
 stylesheets[all][] = css/style-main.css
 stylesheets[all][] = css/demo_table_jui.css
 

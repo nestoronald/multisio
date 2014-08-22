@@ -3,44 +3,32 @@
 
     <!-- #page -->
     <div id="page">
-        
+
         <!-- header -->
         <header role="header" class="container clearfix">
-        
+
             <!-- #pre-header -->
             <div id="pre-header" class="clearfix">
-            
-                <?php if ($page['header']) :?>                
+
+                <?php if ($page['header']) :?>
                 <?php print render($page['header']); ?>
                 <?php endif; ?>
-
-                <?php if (theme_get_setting('social_icons_display','simplecorp')): ?>   
-                    <!-- #social-icons -->
-                    <div id="social-icons" class="clearfix">
-                        <ul id="social-links">
-                            <li class="facebook-link"><a href="https://www.facebook.com/morethan.just.themes" class="facebook" id="social-01" title="Join Us on Facebook!">Facebook</a></li>
-                            <li class="twitter-link"><a href="https://twitter.com/morethanthemes" class="twitter" id="social-02" title="Follow Us on Twitter">Twitter</a></li>
-                            <li class="google-link"><a href="#" id="social-03" title="Google" class="google">Google</a></li>
-                            <li class="dribbble-link"><a href="#" id="social-04" title="Dribble" class="dribbble">Dribble</a></li>
-                            <li class="vimeo-link"><a href="#" id="social-05" title="Vimeo" class="vimeo">Vimeo</a></li>
-                            <li class="skype-link"><a href="#" id="social-06" title="Skype" class="skype">Skype</a></li>
-                            <li class="linkedin-link"><a href="#" id="social-07" title="Linkedin" class="linkedin">Linkedin</a></li>
-                            <li class="pinterest-link"><a href="#" id="social-09" title="Pinterest" class="pinterest">Pinterest</a></li>
-                            <li class="rss-link"><a href="#" id="social-08" title="RSS" class="rss">RSS Feeds</a></li>
-                        </ul>
+                <div id="header-igp">
+                    <div id="logo-minam">
+                        <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/logo-vulcanologia-web.jpg">
                     </div>
-                    <!-- EOF: #social-icons -->
-                <?php endif; ?>    
-                
+                    <div id="logo-igp"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/igp-logo.png"></div>
+                </div>
+
             </div>
             <!-- EOF: #pre-header -->
-      
+
             <!-- #header -->
             <div id="header" class="clearfix">
-                
+
                 <!-- #header-left -->
-                <div id="header-left" class="one-third"> 
-                    
+                <div id="header-left" class="one-third">
+
                     <?php if ($logo): ?>
                     <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
                     <?php endif; ?>
@@ -51,23 +39,23 @@
 							<?php if ($site_name):?>
                             <h1 id="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h1>
                             <?php endif; ?>
-    
+
                             <?php if ($site_slogan):?>
                             <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
                             <?php endif; ?>
-                        </hgroup> 
+                        </hgroup>
                         <!-- EOF:#name-and-slogan -->
                     <?php endif; ?>
 
                 </div>
-                <!--EOF: #header-left -->     
+                <!--EOF: #header-left -->
 
                 <!-- #header-right -->
-                <div id="header-right" class="two-third last">   
+                <div id="header-right" class="two-third last">
 
                     <!-- #navigation-wrapper -->
                     <div id="navigation-wrapper" class="clearfix">
-                        <!-- #main-navigation -->                        
+                        <!-- #main-navigation -->
                         <nav id="main-navigation" class="main-menu clearfix" role="navigation">
                         <?php if ($page['navigation']) :?>
                         <?php print drupal_render($page['navigation']); ?>
@@ -87,10 +75,10 @@
                 </div>
                 <!--EOF: #header-right -->
 
-            </div> 
+            </div>
             <!-- EOF: #header -->
 
-        </header>   
+        </header>
         <!-- EOF: header -->
 
         <div id="content" class="clearfix">
@@ -102,11 +90,11 @@
               <div class="intro-page">
               <?php print render($page['top_content']); ?>
               </div>
-              <!-- EOF: intro-page -->            
-            </div>  
+              <!-- EOF: intro-page -->
+            </div>
             <!--EOF: #top-content -->
             <?php endif; ?>
-            
+
             <!-- #banner -->
             <div id="banner" class="container">
 
@@ -115,7 +103,7 @@
                 <div id="banner-inside">
                 <?php print render($page['banner']); ?>
                 </div>
-                <!-- EOF: #banner-inside -->        
+                <!-- EOF: #banner-inside -->
                 <?php endif; ?>
 
                 <?php if (theme_get_setting('slideshow_display','simplecorp')): ?>
@@ -125,7 +113,7 @@
                     <div id="slider-container">
                         <div class="flexslider loading">
                             <ul class="slides">
-    
+
                                 <!-- first-slide -->
                                 <li class="slider-item">
                                     <div class="slider-image">
@@ -135,27 +123,27 @@
                                         <h3>Vigilancia de los volcanes del sur del Perú.</h3>
                                     </div>
                                 </li>
-    
+
                                 <!-- second-slide -->
                                 <li class="slider-item">
-                                    <div class="slider-image">                        
+                                    <div class="slider-image">
                                         <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img2.jpg" alt="" /></a>
-                                    </div>                        
+                                    </div>
                                     <div class="flex-caption">
                                         <h3>Investigación y monitoreo de volcanes.</h3>
                                     </div>
                                 </li>
-    
+
                                 <!-- third-slide -->
                                 <li class="slider-item">
-                                    <div class="slider-image">                            
+                                    <div class="slider-image">
                                         <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img3.jpg" alt="" /></a>
                                     </div>
                                     <div class="flex-caption">
                                         <h3>Redes sísmicas.</h3>
                                     </div>
                                 </li>
-    
+
                             </ul>
                         </div>
                     </div>
@@ -163,7 +151,22 @@
                     <?php endif; ?>
 
                 <?php endif; ?>
-            
+
+                <?php if (theme_get_setting('social_icons_display','simplecorp')): ?>
+                    <!-- #social-icons -->
+                    <?php if ($is_front): ?>
+                        <div id="social-icons" class="clearfix">
+                            <ul id="social-links">
+                                <li class="facebook-link"><a href="https://www.facebook.com/morethan.just.themes" class="facebook" id="social-01" title="Join Us on Facebook!">Facebook</a></li>
+                                <li class="twitter-link"><a href="https://twitter.com/morethanthemes" class="twitter" id="social-02" title="Follow Us on Twitter">Twitter</a></li>
+                                <li class="google-link"><a href="#" id="social-03" title="Google" class="google">Google</a></li>
+                                <li class="dribbble-link"><a href="#" id="social-04" title="Dribble" class="dribbble">Dribble</a></li>
+                            </ul>
+                        </div>
+                    <?php endif ?>
+                    <!-- EOF: #social-icons -->
+                <?php endif; ?>
+
             </div>
 
             <!-- EOF: #banner -->
@@ -180,34 +183,34 @@
             <div class="container clearfix">
             <?php print $messages; ?>
             </div>
-            <!--EOF: messages -->        
+            <!--EOF: messages -->
             <?php endif; ?>
 
             <!--#featured -->
-            <div id="featured"> 
+            <div id="featured">
 
                 <?php if ($page['highlighted']): ?>
                 <div class="container clearfix"><?php print render($page['highlighted']); ?></div>
                 <?php endif; ?>
 
                 <?php if (theme_get_setting('highlighted_display','simplecorp')): ?>
-                        
-					<?php if ($is_front): ?>  
-    
-                    <div class="container clearfix">
-                          
-                    
 
-    
+					<?php if ($is_front): ?>
+
+                    <div class="container clearfix">
+
+
+
+
                     </div>
-                       
+
                     <?php endif; ?>
 
-                <?php endif; ?>  
+                <?php endif; ?>
 
             </div>
             <!-- EOF: #featured -->
-            
+
             <!--#main-content -->
             <div id="main-content" class="container clearfix">
 
@@ -227,9 +230,9 @@
                 <?php } elseif ($page['sidebar_first']) { ?>
                 <div class="three-fourth last">
                 <?php } elseif ($page['sidebar_second']) { ?>
-                <div class="three-fourth">  
+                <div class="three-fourth">
                 <?php } else { ?>
-                <div class="clearfix">    
+                <div class="clearfix">
                 <?php } ?>
                     <!--#main-content-inside-->
                     <div id="main-content-inside">
@@ -253,7 +256,7 @@
                     </aside>
                     </div>
                     <!--EOF:.sidebar second-->
-                <?php endif; ?>  
+                <?php endif; ?>
 
             </div>
             <!--EOF: #main-content -->
@@ -266,15 +269,15 @@
                 <?php endif; ?>
 
                 <?php if (theme_get_setting('carousel_display','simplecorp')): ?>
-                        
-					<?php if ($is_front): ?>  
-                    
 
-               
+					<?php if ($is_front): ?>
+
+
+
                 <?php endif; ?>
 
-            <?php endif; ?>  
-            
+            <?php endif; ?>
+
             </div>
             <!-- EOF: #bottom-content -->
 
@@ -283,7 +286,7 @@
 
         <!-- #footer -->
         <footer id="footer">
-            
+
             <?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third'] || $page['footer_fourth']) :?>
             <div class="container clearfix">
 
@@ -302,13 +305,13 @@
                 <div class="one-fourth footer-area">
                 <?php if ($page['footer_third']) :?>
                 <?php print render($page['footer_third']); ?>
-                <?php endif; ?> 
+                <?php endif; ?>
                 </div>
 
                 <div class="one-fourth footer-area last">
                 <?php if ($page['footer_fourth']) :?>
                 <?php print render($page['footer_fourth']); ?>
-                <?php endif; ?> 
+                <?php endif; ?>
                 </div>
 
             </div>
@@ -319,25 +322,25 @@
                 <div class="container clearfix">
                     <span class="right"><a class="backtotop" href="#">↑</a></span>
                     <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('class' => array('menu', 'secondary-menu', 'links', 'clearfix')))); ?>
-                    
+
                     <?php if ($page['footer']) :?>
                     <?php print render($page['footer']); ?>
                     <?php endif; ?>
-                    
+
                     <div class="credits" style="color:#FFFFFF; text-align:center;">
-			  Instituto Geofísico del Perú  - Oficina Regional de Arequipa | Telefax:   +51  54 251373 | 
-Urb. La Marina B-19, Cayma - Arequipa                    
+			  Instituto Geofísico del Perú  - Oficina Regional de Arequipa | Telefax:   +51  54 251373 |
+Urb. La Marina B-19, Cayma - Arequipa
                     </div>
 
                 </div>
             </div>
             <!-- EOF: #footer-bottom -->
-            
-        </footer> 
+
+        </footer>
         <!-- EOF #footer -->
 
     </div>
     <!-- EOF: #page -->
 
-</div> 
+</div>
 <!-- EOF: #page-wrapper -->

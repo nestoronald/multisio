@@ -22,6 +22,7 @@
 .block-icon-service.block-icon-5 span {
     background-position: -50px -200px;
 }
+/*module search*/
 #search-igp {
     position: relative;
     display: block;
@@ -35,6 +36,7 @@
 .region-search{
     padding: 0 1em;
 }
+/*fin search*/
 body .entry-body {
     margin: 10px 0 0px 0;
 }
@@ -47,16 +49,7 @@ body .hentry {
     position: relative;
     padding: 1em;
 }*/
-#logo-minam{
-    float: left;
-    margin: 14px 0 0 0;
-}
-#logo-igp{
-    float: left;
-    right: 0;
-    position: absolute;
-    bottom: -6px;
-}
+
 #footer-bottom, #footer-bottom ul.menu li a {
     color: #ccc;
 }
@@ -128,9 +121,7 @@ body .hentry {
 ul#social-links li a.login {
     background: url("../images/icons/login.png") 50% 50% no-repeat;
 }
-.cndg-main #social-icons {
-    padding: 15px 0;
-}
+
 .cndg-main .downarrowclass {
     top: 44px
 }

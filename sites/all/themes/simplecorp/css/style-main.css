@@ -1,6 +1,23 @@
 /*Estilos general para platilla base IGP*/
+/*cabecera */
+#header-igp{
+    display: block;
+    height: 79px;
+    position: relative;
+    padding: 1em;
+}
+#logo-igp{
+    right: 0;
+    position: absolute;
+}
+#logo-minam{
+    float: left;
+    margin: 14px 0 0 0;
+}
+
+/*fin cabecera*/
 /*Features IGP*/
-.one-half{
+/*.one-half{
     background: #ededed;
     border-radius: 6px;
     width: 30%;
@@ -10,7 +27,7 @@
 .one-half-last{
     width: 32%;
     margin-right: 0;
-}
+}*/
 .img-align-right {margin: 1em 10px 10px 0; float: right;}
 #featured .one-half a h3 { color: #40b4e3;}
 #header-igp { position: relative; padding: 1.2em 0;}
@@ -26,7 +43,32 @@
     border: 0;
     padding-bottom: 0;
 }
-#logo-igp{
-    right: 0;
-    position: absolute;
+
+/*Vista paginas de portada*/
+.view-features-articles li {
+    list-style: none;
+}
+.view-features-articles .views-row {
+    background: #ededed;
+    border-radius: 6px;
+    width: 28%;
+    padding: 0.7em 0.9em 0.3em;
+    height: 225px;
+    float: left;
+    margin: 0 0.3em 1em 1em;
+}
+.view-features-articles .views-field-title a {
+    color: #40b4e3;
+    font-size: 23px;
+    line-height: 26px;
+}
+.view-features-articles .views-field-field-imagen img{margin: 1em 10px 10px 0; float: right;}
+
+.line-featured{
+    border-bottom: 4px solid #ededed;
+}
+
+/*social icons*/
+.cndg-main #social-icons {
+    padding: 10px 0;
 }

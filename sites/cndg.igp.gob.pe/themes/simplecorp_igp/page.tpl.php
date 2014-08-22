@@ -5,9 +5,7 @@
     <div id="page">
 
         <!-- header -->
-
         <header role="header" class="container clearfix">
-
             <!-- #pre-header -->
 
             <div id="pre-header" class="clearfix">
@@ -17,9 +15,9 @@
                 <?php endif; ?>
                 <div id="header-igp">
                     <div id="logo-minam">
-                        <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/logo-minan-igp_2012.png">
+                        <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/logo-cndg-web.jpg">
                     </div>
-                    <div id="logo-igp"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/igp-trans.png"></div>
+                    <div id="logo-igp"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/igp-logo.png"></div>
                 </div>
 
             </div>
@@ -194,7 +192,10 @@
             <div id="featured">
 
                 <?php if ($page['highlighted']): ?>
-                <div class="container clearfix"><?php print render($page['highlighted']); ?></div>
+                <div class="container clearfix">
+                    <div class="line-featured"> </div>
+                    <?php print render($page['highlighted']); ?>
+                </div>
                 <?php endif; ?>
 
                 <?php if (theme_get_setting('highlighted_display','simplecorp')): ?>
@@ -203,49 +204,6 @@
 
                     <div class="container clearfix">
 
-                        <!--featured-item -->
-                        <div class="one-half">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/doc-admin.jpg" class="img-align-right" alt="" />
-                            <a href="./node/6"><h3>Documentos de gestión / procesos</h3></a>
-                            <p>Se encarga de modelar procesos con la finalidad de optimizar las actividades de gestión o desarrollo.</p>
-                            <div class="readmore">
-                                <a href="./node/6">Leer mas</a>
-                            </div>
-                        </div>
-                        <!--EOF: featured-item -->
-
-                        <!--featured-item -->
-                        <div class="one-half">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/desarrollo.jpg" class="img-align-right" alt="" />
-                            <a href="./node/4"><h3>Programación y desarrollo</h3></a>
-                            <p>Se encarga desarrollar diferentes herramientas y aplicativos web, que permiten atender servicios administrativos y  técnicos.</p>
-                            <div class="readmore">
-                                <a href="./node/4">Leer mas</a>
-                            </div>
-                        </div>
-                        <!--EOF: featured-item -->
-
-                        <!--featured-item -->
-                        <div class="one-half one-half-last">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/admin-redes.png" class="img-align-right" alt="" />
-                            <a href="./node/5"><h3>Administración de redes</h3></a>
-                            <p>Se encarga de planificar y ejecutar técnicas para mantener la red operativa, eficiente, segura, constantemente monitoreada.</p>
-                            <div class="readmore">
-                                <a href="./node/5">Leer mas</a>
-                            </div>
-                        </div>
-                        <!--EOF: featured-item -->
-
-                        <!--featured-item -->
-                        <div class="one-half">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-01.jpg" class="img-align-right" alt="" />
-                            <a href="./node/3"><h3>Servicios informáticos</h3></a>
-                            <p>Se encarga de planificar, evaluar y analizar  permanentemente los equipos y aplicaciones a nivel de software con que cuenta el IGP.</p>
-                            <div class="readmore">
-                                <a href="./node/3">Leer mas</a>
-                            </div>
-                        </div>
-                        <!--EOF: featured-item -->
 
                     <div class="horizontal-line"> </div>
 

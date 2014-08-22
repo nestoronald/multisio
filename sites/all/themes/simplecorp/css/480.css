@@ -1,11 +1,16 @@
 ﻿/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 /*--------------------------------------*/
+/*logo*/
+#logo-igp {
+    display: none;
+}
 /*COLUMNS*/
 /*--------------------------------------*/
 .container { width: 400px; }
 
-.one-half { width: 400px; }
+.one-half{ width: 400px; }
+.view-features-articles .views-row { width: 380px; margin-left:0; height: 170px; }
 
 .one-third { width: 400px; }
 
@@ -54,7 +59,7 @@ img.intro-img { margin-left: -20px!important; max-width: 440px!important; max-he
 #page { float: none; height: auto; width: 440px; background: #FFF; -webkit-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20); -moz-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20);
 box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20); padding: 0 0px; text-align: left; margin: 0 auto; }
 
-#pre-header { background: #aad5e3; float: left; width: 400px; padding: 0 20px; margin-left: -20px; border-bottom: 1pt solid #d8d5cd; min-height: 50px; margin-bottom: 30px; }
+#pre-header { float: left; width: 400px; padding: 0 20px; margin-left: -20px; border-bottom: 1pt solid #d8d5cd; min-height: 50px; margin-bottom: 30px; }
 
 #pre-header ul.menu, #pre-header .block-menu h2 { text-align: center;}
 
@@ -84,7 +89,7 @@ ul#projects-carousel li .item-content { width: 172px; }
 
 #social-icons ul#social-links {float: none;}
 
-ul#social-links li { margin: 0px 3px 5px 3px; float: none; display: inline-block; }
+ul#social-links li { margin: 0px 3px 0; float: none; display: inline-block; }
 
 ul#social-links li:last-child {margin: 0px 3px 5px 3px;}
 
@@ -151,13 +156,13 @@ ul#portfolio-items-one-fourth li .item-content p { margin: 0; padding: 0;  font-
 
 ul#portfolio-items-one-fourth li .item-content p a { margin: 0; padding: 0;  font-weight: 800; color: #FFF; }
 
-ul#portfolio-items-one-fourth li  .item-content span { font-style: italic;  color: #FFF; } 
+ul#portfolio-items-one-fourth li  .item-content span { font-style: italic;  color: #FFF; }
 
 ul#portfolio-items-one-fourth li   img { width: 100%; height: auto; padding: 0;  margin: 0; }
 
 ul#portfolio-items-one-third { overflow: hidden; position: relative;  list-style: none; margin: 0 !important; padding: 0px 0 0 0; }
 
-ul#portfolio-items-one-third li { width: 190px; min-height: 210px!important;  margin: 0 20px 20px 0!important; } 
+ul#portfolio-items-one-third li { width: 190px; min-height: 210px!important;  margin: 0 20px 20px 0!important; }
 
 ul#portfolio-items-one-third li .portfolio-item { float: left; background: #f8f9f9;  width: 190px; height: auto; padding: 0!important; }
 
@@ -170,7 +175,7 @@ ul#portfolio-items-one-third li .item-content p { margin: 0; padding: 0; font-we
 
 ul#portfolio-items-one-third li .item-content p a { margin: 0; padding: 0; font-weight: 800;  color: #FFF; }
 
-ul#portfolio-items-one-third li .item-content span { font-style: italic; color: #FFF;  } 
+ul#portfolio-items-one-third li .item-content span { font-style: italic; color: #FFF;  }
 
 ul#portfolio-items-one-third li  img { width: 100%; height: auto;  padding: 0; margin: 0; }
 
@@ -193,7 +198,7 @@ ul#portfolio-items-one-third li  img { width: 100%; height: auto;  padding: 0; m
 /*--------------------------------------*/
 /*OTHER FEATURES (google maps, intro inner page, contact forms...)*/
 /*--------------------------------------*/
-.button-holder-2 { float: none!important;  margin: 0 auto 20px auto!important; width: 150px; } 
+.button-holder-2 { float: none!important;  margin: 0 auto 20px auto!important; width: 150px; }
 
 .inner-page-intro h2 { text-align: center; }
 
@@ -245,10 +250,10 @@ ul#portfolio-items-one-third li  img { width: 100%; height: auto;  padding: 0; m
 #contact-form input[type="text"]:focus,
 #contact-form input[type="password"]:focus,
 #contact-form  input[type="email"]:focus,
-#contact-form  textarea:focus { border: 1px solid #bbbbbb; color: #555; box-shadow: 0px 0px 5px #CCC,inset 0px 2px 4px #f3f3f3; -moz-box-shadow: 0px 0px 5px #CCC,inset 0px 2px 4px #f3f3f3;  
+#contact-form  textarea:focus { border: 1px solid #bbbbbb; color: #555; box-shadow: 0px 0px 5px #CCC,inset 0px 2px 4px #f3f3f3; -moz-box-shadow: 0px 0px 5px #CCC,inset 0px 2px 4px #f3f3f3;
 -webkit-box-shadow: 0px 0px 5px #CCC,inset 0px 2px 4px #f3f3f3; }
 
-.inner-page-intro h2 { font-size: 21px;  line-height: 24px; } 
+.inner-page-intro h2 { font-size: 21px;  line-height: 24px; }
 
 .inner-page-intro h1 { font-size: 24px; line-height: 20px;  text-align: center; }
 
