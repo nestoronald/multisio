@@ -155,14 +155,14 @@
                 <?php if (theme_get_setting('social_icons_display','simplecorp')): ?>
                     <!-- #social-icons -->
                     <?php if ($is_front): ?>
-                        <div id="social-icons" class="clearfix">
+                        <!--div id="social-icons" class="clearfix">
                             <ul id="social-links">
                                 <li class="facebook-link"><a href="https://www.facebook.com/morethan.just.themes" class="facebook" id="social-01" title="Join Us on Facebook!">Facebook</a></li>
                                 <li class="twitter-link"><a href="https://twitter.com/morethanthemes" class="twitter" id="social-02" title="Follow Us on Twitter">Twitter</a></li>
                                 <li class="google-link"><a href="#" id="social-03" title="Google" class="google">Google</a></li>
                                 <li class="dribbble-link"><a href="#" id="social-04" title="Dribble" class="dribbble">Dribble</a></li>
                             </ul>
-                        </div>
+                        </div-->
                     <?php endif ?>
                     <!-- EOF: #social-icons -->
                 <?php endif; ?>
@@ -170,6 +170,15 @@
             </div>
 
             <!-- EOF: #banner -->
+
+            <?php if ($page['social_media']) :?>
+                <!--.social media-->
+                <div class="container clearfix">
+                <?php print render($page['social_media']); ?>
+                </div>
+                <!--EOF:.social media-->
+            <?php endif; ?>
+
             <?php if ($breadcrumb && theme_get_setting('breadcrumb_display','simplecorp')):?>
             <!-- #breadcrumb -->
             <div class="container clearfix">
@@ -198,9 +207,6 @@
 					<?php if ($is_front): ?>
 
                     <div class="container clearfix">
-
-
-
 
                     </div>
 

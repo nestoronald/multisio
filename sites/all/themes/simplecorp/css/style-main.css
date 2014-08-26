@@ -31,10 +31,7 @@
 .img-align-right {margin: 1em 10px 10px 0; float: right;}
 #featured .one-half a h3 { color: #40b4e3;}
 #header-igp { position: relative; padding: 1.2em 0;}
-#social-icons {
-    background: #9dcedf;
-    margin-bottom: 10px;
-}
+
 .flex-control-nav, .flex-direction-nav{
     display: none;
 }
@@ -70,7 +67,15 @@
 }
 
 /*social icons*/
+#social-icons, #block-views-redes-sociales-block {
+    background: #9dcedf;
+    margin-bottom: 10px;
+}
 .cndg-main #social-icons {
     padding: 10px 0;
 }
 .field-name-field-imagen { display: none}
+
+.view-redes-sociales li {
+    list-style: none;
+}

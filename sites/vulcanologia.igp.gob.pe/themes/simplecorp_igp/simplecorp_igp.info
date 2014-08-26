@@ -9,6 +9,7 @@ regions[search] = Search
 regions[navigation] = Navigation
 regions[top_content] = Top Content
 regions[banner] = Banner
+regions[social_media] = Social Media
 regions[highlighted] = Highlighted
 regions[content] = Content
 regions[sidebar_first] = Sidebar First
