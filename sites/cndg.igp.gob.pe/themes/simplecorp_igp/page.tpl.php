@@ -15,9 +15,9 @@
                 <?php endif; ?>
                 <div id="header-igp">
                     <div id="logo-minam">
-                        <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/logo-cndg-web.jpg">
+                        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/logo-vulcanologia-web.jpg"></a>
                     </div>
-                    <div id="logo-igp"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/igp-logo.png"></div>
+                    <div id="logo-igp"><a href="http://www.igp.gob.pe" target="_blank" rel="IGP" title="Portal web - IGP"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/igp-logo.png"></a></div>
                 </div>
 
             </div>
