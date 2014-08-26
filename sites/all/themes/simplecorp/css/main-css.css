@@ -131,13 +131,13 @@ img { max-width: 100%; height: auto;
 /*-----------------------------------------------------------*/
 /*-------------------- SOCIAL ICONS --------------------------*/
 /*-----------------------------------------------------------*/
-#social-icons { position: relative; padding: 10px 0 8px 0; font-size: 0;}
+#social-icons, #block-views-redes-sociales-block { position: relative; padding: 10px 0 8px 0; font-size: 0;}
 
-ul#social-links { z-index: 1; margin: 0px; list-style: none; float: right; }
+ul#social-links, .view-redes-sociales- .views-row  { z-index: 1; margin: 0px; list-style: none; float: right; }
 
 ul#social-links li { display: inline-block; float: none; }
 
-ul#social-links li {
+ul#social-links li, .view-redes-sociales- .views-field {
     display: inline-block;
     font-size: 12px;
     list-style: none;
@@ -161,11 +161,11 @@ ul#social-links li {
     -webkit-box-shadow: 0px 1px 1px #a7dcef,inset 0px 2px 5px #67a7bd;
 }
 
-ul#social-links li  a.facebook { background: url("../images/icons/facebook.png") 50% 50% no-repeat }
+ul#social-links li  a.facebook, .views-field-field-enlace-facebook a{ background: url("../images/icons/facebook.png") 50% 50% no-repeat }
 
-ul#social-links li  a.twitter { background: url("../images/icons/twitter.png") 50% 50% no-repeat }
+ul#social-links li  a.twitter, .views-field-field-enlace-twitter a  { background: url("../images/icons/twitter.png") 50% 50% no-repeat }
 
-ul#social-links li  a.google { background: url("../images/icons/google.png") 50% 50% no-repeat }
+ul#social-links li  a.google, .views-field-field-enlace-google- a { background: url("../images/icons/google.png") 50% 50% no-repeat }
 
 ul#social-links li  a.dribbble { background: url("../images/icons/dribbble.png") 50% 50% no-repeat }
 
@@ -179,7 +179,7 @@ ul#social-links li  a.linkedin { background: url("../images/icons/linkedin.png")
 
 ul#social-links li  a.pinterest { background: url("../images/icons/pinterest.png") 50% 50% no-repeat}
 
-ul#social-links > li.facebook-link:hover {
+ul#social-links > li.facebook-link:hover, .views-field-field-enlace-facebook:hover {
     display: inline-block;
     font-size: 12px;
     width: 32px;
@@ -198,7 +198,7 @@ ul#social-links > li.facebook-link:hover {
     -webkit-box-shadow: 0px 1px 1px #2a4782,inset 0px 2px 5px #4a67a0;
 }
 
-ul#social-links > li.twitter-link:hover {
+ul#social-links > li.twitter-link:hover, .views-field-field-enlace-twitter:hover {
     display: inline-block;
     font-size: 12px;
     width: 32px;
@@ -217,7 +217,7 @@ ul#social-links > li.twitter-link:hover {
     -webkit-box-shadow: 0px 1px 1px #6cb6cf,inset 0px 2px 5px #7fc9e2;
 }
 
-ul#social-links > li.google-link:hover {
+ul#social-links > li.google-link:hover, .views-field-field-enlace-google-:hover {
     display: inline-block;
     font-size: 12px;
     width: 32px;
@@ -312,7 +312,7 @@ ul#social-links > li.skype-link:hover {
     -webkit-box-shadow: 0px 1px 1px #0281ae,inset 0px 2px 5px #b5ebff;
 }
 
-ul#social-links li  a {width: 32px; height: 32px; display: block; }
+ul#social-links li  a, .view-redes-sociales- .views-field  a {width: 32px; height: 32px; display: block; }
 
 ul#social-links > li.rss-link:hover {
     display: inline-block;
