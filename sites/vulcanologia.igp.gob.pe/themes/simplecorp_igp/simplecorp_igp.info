@@ -47,6 +47,7 @@ settings[responsive_meta]= 1
 settings[responsive_respond]= 0
 settings[button_color]= 'steel_blue'
 settings[theme_color]= 'default'
+settings[l_minam_igp_area]= 'logo_default'
 settings[columns_enable]= 0
 settings[lists_enable]= 0
 settings[boxes_enable]= 0

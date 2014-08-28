@@ -10,12 +10,20 @@
             <!-- #pre-header -->
             <div id="pre-header" class="clearfix">
 
+
+
+
                 <?php if ($page['header']) :?>
                 <?php print render($page['header']); ?>
                 <?php endif; ?>
                 <div id="header-igp">
                     <div id="logo-minam">
-                        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/logo-vulcanologia-web.jpg"></a>
+                        <?php if (theme_get_setting('l_minam_igp_area')== 'logo_default'):?>
+                         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp')?>/images/logo-minan-igp_2012.png" alt="IGP Logo"/></a>
+                        <?php else: ?>
+                         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php echo file_create_url(file_load(theme_get_setting('l_minam_igp_area'))->uri);?>" alt="IGP Logo"/></a>
+                        <?php endif; ?>
+
                     </div>
                     <div id="logo-igp"><a href="http://www.igp.gob.pe" target="_blank" rel="IGP" title="Portal web - IGP"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/igp-logo.png"></a></div>
                 </div>

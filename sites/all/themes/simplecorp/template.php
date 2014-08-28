@@ -3,6 +3,12 @@
 /**
  * Add javascript files for jquery slideshow.
  */
+if (theme_get_setting('l_minam_igp_area')!= 'logo_default'):
+	$file = file_load(theme_get_setting('l_minam_igp_area'));
+	$file->status = FILE_STATUS_PERMANENT;
+	file_save($file);
+endif;
+
 if (theme_get_setting('slideshow_js','simplecorp')):
 
 	drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/plugins/jquery.flexslider-min.js');

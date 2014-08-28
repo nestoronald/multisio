@@ -27,6 +27,27 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
         '#collapsible' => TRUE,
         '#collapsed' => FALSE,
     );
+    $form['mtt_settings']['tabs']['cabecera'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Cabecera'),
+        '#collapsible' => TRUE,
+        '#collapsed' => FALSE,
+    );
+    $form['mtt_settings']['tabs']['cabecera']['l_minam_igp_area'] = array(
+        '#title' => t('Logo del area'),
+        '#type' => 'managed_file',
+        '#description' => t('Imagen del area para su ubicación en la cabecera del sitio web'),
+        '#default_value' => theme_get_setting('l_minam_igp_area', 'simplecorp'),
+
+        '#progress_indicator' => "bar",
+        '#upload_location' => 'public://logos/',
+        '#upload_validators' => array(
+            'file_validate_extensions' => array('gif png jpg jpeg'),
+            // Pass the maximum file size in bytes
+            'file_validate_size' => array('MAX_FILE_SIZE' * 1200 * 300),
+          ),
+
+    );
 
     $form['mtt_settings']['tabs']['looknfeel']['theme_colors'] = array(
         '#type' => 'fieldset',
@@ -466,4 +487,16 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
         '#description'   => t('IE 6-8 require a JavaScript polyfill solution to add basic support of CSS3 media queries. Note that you should enable <strong>Aggregate and compress CSS files</strong> through <em>/admin/config/development/performance</em>.'),
     );
 
+    //$form['#submit'][] = 'simplecorp_system_theme_settings_form_submit';
+    $form['mtt_settings']['tabs']['cabecera']['#submit'][] = 'simplecorp_system_theme_settings_form_submit';
+
 }
+
+function simplecorp_system_theme_settings_form_submit(&$form, &$form_state) {
+      $fid = $form_state['values']['l_minam_igp_area'];
+      $file = file_load($fid);
+      $file->status = FILE_STATUS_PERMANENT;
+      file_save($file);
+      print "ssssssssd";
+    }
+
