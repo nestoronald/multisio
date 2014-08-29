@@ -79,3 +79,19 @@
 .view-redes-sociales li {
     list-style: none;
 }
+
+/*slider Nivo */
+.nivo-caption {
+    padding: 0.8em 0;
+}
+.nivo-caption p {
+    font-size: 24px;
+    line-height: 30px;
+    color: #9dcedf;
+    font-weight: normal;
+    font-variant: normal;
+    white-space: normal;
+    font-family: 'Dosis',Arial,Verdana,serif;
+}
+
+/*fin slider nivo*/
