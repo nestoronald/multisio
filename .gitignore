@@ -6,3 +6,4 @@
 sites/*/private
 sites/*/files/languages
 sites/*/files/languages/*
+sites/*/files/styles/slider_home/*
