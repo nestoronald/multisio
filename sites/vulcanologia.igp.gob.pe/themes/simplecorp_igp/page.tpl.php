@@ -118,43 +118,7 @@
 
 					<?php if ($is_front): ?>
                     <!-- #slider-container -->
-                    <div id="slider-container">
-                        <div class="flexslider loading">
-                            <ul class="slides">
 
-                                <!-- first-slide -->
-                                <li class="slider-item">
-                                    <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img1.jpg" alt="" /></a>
-                                    </div>
-                                    <div class="flex-caption">
-                                        <h3>Vigilancia de los volcanes del sur del Perú.</h3>
-                                    </div>
-                                </li>
-
-                                <!-- second-slide -->
-                                <li class="slider-item">
-                                    <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img2.jpg" alt="" /></a>
-                                    </div>
-                                    <div class="flex-caption">
-                                        <h3>Investigación y monitoreo de volcanes.</h3>
-                                    </div>
-                                </li>
-
-                                <!-- third-slide -->
-                                <li class="slider-item">
-                                    <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img3.jpg" alt="" /></a>
-                                    </div>
-                                    <div class="flex-caption">
-                                        <h3>Redes sísmicas.</h3>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
                     <!-- EOF: #slider-container -->
                     <?php endif; ?>
 
