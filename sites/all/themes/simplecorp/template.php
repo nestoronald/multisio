@@ -3,7 +3,7 @@
 /**
  * Add javascript files for jquery slideshow.
  */
-if (theme_get_setting('l_minam_igp_area')!= 'logo_default'):
+if (theme_get_setting('l_minam_igp_area')!= ''):
 	$file = file_load(theme_get_setting('l_minam_igp_area'));
 	$file->status = FILE_STATUS_PERMANENT;
 	file_save($file);
@@ -46,6 +46,11 @@ if (theme_get_setting('slideshow_js','simplecorp')):
 		            }
 		        });
 		    });
+			jQuery(\'.view-id-features_articles ul li\').each(function(i){
+				link = jQuery(this).find(\'.views-field-title a\').attr(\'href\');
+				texto = jQuery(this).find(\'.views-field-body p\').html();
+				jQuery(this).find(\'.views-field-body p\').html(texto+\'... <div><a href="\'+link+\'" title="Click aqui para mas información">Leer más</a></div>\');
+			})
 		});',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
 	);
 
@@ -189,6 +194,13 @@ if (theme_get_setting('carousel_js','simplecorp')):
 		                    },
 		                });
 		            }
+		            jQuery(\'.views-field-field-imagen-carousel .field-content\').each(function(i){
+                        img = jQuery(this).html();
+                        link = jQuery(\'.views-field-field-enlace  a\').eq(i).attr(\'href\');
+                        jQuery(this).html(\'<a href="\'+link+\'" target="_blank">\'+img+\'</a>\');
+                    });
+
+
 		        })();
 		    });
 		});',	array('type' => 'inline', 'scope' => 'footer', 'weight' => 7)

@@ -18,7 +18,7 @@
                 <?php endif; ?>
                 <div id="header-igp">
                     <div id="logo-minam">
-                        <?php if (theme_get_setting('l_minam_igp_area')== 'logo_default'):?>
+                        <?php if (theme_get_setting('l_minam_igp_area')== ''):?>
                          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp')?>/images/logo-minan-igp_2012.png" alt="IGP Logo"/></a>
                         <?php else: ?>
                          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php echo file_create_url(file_load(theme_get_setting('l_minam_igp_area'))->uri);?>" alt="IGP Logo"/></a>

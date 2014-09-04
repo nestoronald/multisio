@@ -488,15 +488,7 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
     );
 
     //$form['#submit'][] = 'simplecorp_system_theme_settings_form_submit';
-    $form['mtt_settings']['tabs']['cabecera']['#submit'][] = 'simplecorp_system_theme_settings_form_submit';
-
 }
 
-function simplecorp_system_theme_settings_form_submit(&$form, &$form_state) {
-      $fid = $form_state['values']['l_minam_igp_area'];
-      $file = file_load($fid);
-      $file->status = FILE_STATUS_PERMANENT;
-      file_save($file);
-      print "ssssssssd";
-    }
+
 
