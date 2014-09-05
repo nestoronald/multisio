@@ -48,8 +48,8 @@ if (theme_get_setting('slideshow_js','simplecorp')):
 		    });
 			jQuery(\'.view-id-features_articles ul li\').each(function(i){
 				link = jQuery(this).find(\'.views-field-title a\').attr(\'href\');
-				texto = jQuery(this).find(\'.views-field-body p\').html();
-				jQuery(this).find(\'.views-field-body p\').html(texto+\'... <div><a href="\'+link+\'" title="Click aqui para mas información">Leer más</a></div>\');
+				texto = jQuery(this).find(\'.views-field-body p\').eq(0).html();
+				jQuery(this).find(\'.views-field-body p\').eq(0).html(texto+\'... <div><a href="\'+link+\'" title="Click aqui para mas información">Leer más</a></div>\');
 			})
 		});',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
 	);
