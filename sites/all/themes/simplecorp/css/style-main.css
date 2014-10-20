@@ -70,11 +70,13 @@
 #social-icons, #block-views-redes-sociales-block {
     background: #9dcedf;
     margin-bottom: 10px;
+    display:block;
+    clear:both;
 }
 .cndg-main #social-icons {
     padding: 10px 0;
 }
-.field-name-field-imagen { display: none}
+.field-name-field-imagen .field-item even { display: none}
 
 .view-redes-sociales li {
     list-style: none;
@@ -121,3 +123,78 @@
 /*fin-jcarosusel*/
 
 >>>>>>> 27593596a6205b16eb71b6f2ae98879ed14e64c5
+
+/*view-slideshow responsive*/
+.views_slideshow_cycle_main {
+  width: 100%;
+  float: left;
+}
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame {
+  width: 100% !important;
+  height: auto;
+}
+.views_slideshow_cycle_main .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+  height: auto;
+}
+.views_slideshow_cycle_main .field-content {
+  max-width: 100%;
+  width: 100%;
+}
+.views_slideshow_cycle_main .field-content img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: block;
+  line-height: 0;
+}
+.views_slideshow_cycle_main .views-field-title {
+    bottom: 0;
+    color: #FFFFFF;
+    left: 0;
+    padding: 3%;
+    position: absolute;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    width: 94%;
+    font-size: 20px;
+    font-family: 'Dosis',Arial,Verdana,serif;
+    margin: 0;
+    background: url("../images/caption-bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0)
+}
+.views_slideshow_cycle_main .views-field-title span.field-content {
+    color: #9DCEDF;
+    margin: 0;
+}
+/*icon acordeon*/
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon, .ui-icon-triangle-1-s {
+position: absolute;
+left: .5em;
+top: 50%;
+margin-top: -8px;
+}
+.menu .leaf a.active{
+  color:#9DCEDF;
+}
+
+/*slidershow href*/
+.views-field-field-enlace-slider{
+    display: none;
+    z-index: -999;
+}
+#page-wrapper .flex-caption a > * {
+   color:#9DCEDF;
+}
+#page-wrapper .views-field-field-imagen-slider, #page-wrapper .views-field-field-imagen-slider a {
+   font-size: 0;
+   line-height: 0;
+}
+
+#page-wrapper .flex-caption a:hover {
+    text-decoration: underline;
+}
+/*fin slidershow href*/
+#logo-minam img {
+    height:51px;
+}

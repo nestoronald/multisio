@@ -5,6 +5,8 @@
 #logo-igp {
     display: none;
 }
+#header-igp { padding:0;}
+#header-igp img {  width: 100%;}
 /*COLUMNS*/
 /*--------------------------------------*/
 .container { width: 400px; }
@@ -59,7 +61,7 @@ img.intro-img { margin-left: -20px!important; max-width: 440px!important; max-he
 #page { float: none; height: auto; width: 440px; background: #FFF; -webkit-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20); -moz-box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20);
 box-shadow: 0 10px 80px 0 rgba(0, 0, 0, 0.20); padding: 0 0px; text-align: left; margin: 0 auto; }
 
-#pre-header { float: left; width: 400px; padding: 0 20px; margin-left: -20px; border-bottom: 1pt solid #d8d5cd; min-height: 50px; margin-bottom: 30px; }
+#pre-header { float: left; width: 400px; padding: 0 20px; margin-left: -20px; border-bottom: 1pt solid #d8d5cd; min-height: 50px;/* margin-bottom: 30px;*/ }
 
 #pre-header ul.menu, #pre-header .block-menu h2 { text-align: center;}
 
@@ -262,6 +264,8 @@ ul#portfolio-items-one-third li  img { width: 100%; height: auto;  padding: 0; m
 ul.center-list li a { text-align: center; padding: 5px 2px; }
 
 .flexslider.loading { min-height: 200px; }
+/*slideshow*/
+.views_slideshow_cycle_main { height: 149px; }
 
 input#edit-keys, .page-user input.form-text, .no-sidebars #comment-form input.form-text { width: 96%; }
 

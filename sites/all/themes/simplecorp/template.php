@@ -50,7 +50,29 @@ if (theme_get_setting('slideshow_js','simplecorp')):
                 link = jQuery(this).find(\'.views-field-title a\').attr(\'href\');
                 texto = jQuery(this).find(\'.views-field-body p\').eq(0).html();
                 jQuery(this).find(\'.views-field-body p\').eq(0).html(texto+\'... <div><a href="\'+link+\'" title="Click aqui para mas información">Leer más</a></div>\');
-            })
+            });
+            if (jQuery(".views-field-field-image-para-slider").length){
+                 slider_tag= ".views-field-field-image-para-slider";
+            }
+            if (jQuery(".views-field-field-imagen-slider").length){
+                 slider_tag= ".views-field-field-imagen-slider";
+            }
+	    if(typeof(slider_tag)!="undefined"){
+	      jQuery(slider_tag).each(function(index){
+                jQuery(this).addClass("slider-image");
+                titulo=jQuery(this).find("img").attr("title");
+                jQuery(this).after("<div class=\'flex-caption\'><h3>"+titulo+"</h3></div>");
+                console.log("titulo: "+titulo);
+		if (jQuery(".views-field-field-enlace-slider").eq(index).find(\'a\').length) {
+                    href=jQuery(".views-field-field-enlace-slider").eq(index).find(\'a\').attr(\'href\');
+                    console.log("enlace: "+href);
+                }
+                if (typeof(href)!="undefined"){
+                    imagen = jQuery(this).find(".field-content").html();
+                    jQuery(this).html("<a target= \'_blank\' href="+href+">"+imagen+"</a>");
+                }
+              });
+	    }
         });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
     );
 
@@ -109,7 +131,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
                 "bPaginate": true,
                 "bPaginate": true,
                 "sPaginationType": "full_numbers",
-                "iDisplayLength": 10,
+                "iDisplayLength": 20,
                 "oLanguage": {
                     "sProcessing":     "Procesando...",
                     "sLengthMenu":     "Mostrar _MENU_ registros",
