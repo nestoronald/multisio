@@ -3,7 +3,7 @@ description = SimpleCorpIGP, theme for IGP.
 
 core = 7.x
 
-stylesheets[all][] = css/simplecorp-main.css
+stylesheets[all][] = css/style-biblioteca.css
 regions[header] = Header
 regions[search] = Search
 regions[navigation] = Navigation

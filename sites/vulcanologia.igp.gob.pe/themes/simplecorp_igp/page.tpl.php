@@ -35,27 +35,6 @@
             <div id="header" class="clearfix">
 
                 <!-- #header-left -->
-                <div id="header-left" class="one-third">
-
-                    <?php if ($logo): ?>
-                    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-                    <?php endif; ?>
-
-                    <?php if ($site_name || $site_slogan): ?>
-                        <!-- #name-and-slogan -->
-                        <hgroup id="name-and-slogan">
-							<?php if ($site_name):?>
-                            <h1 id="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h1>
-                            <?php endif; ?>
-
-                            <?php if ($site_slogan):?>
-                            <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-                            <?php endif; ?>
-                        </hgroup>
-                        <!-- EOF:#name-and-slogan -->
-                    <?php endif; ?>
-
-                </div>
                 <!--EOF: #header-left -->
 
                 <!-- #header-right -->

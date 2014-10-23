@@ -132,6 +132,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
                 "bPaginate": true,
                 "sPaginationType": "full_numbers",
                 "iDisplayLength": 20,
+		"bSort": false,
                 "oLanguage": {
                     "sProcessing":     "Procesando...",
                     "sLengthMenu":     "Mostrar _MENU_ registros",

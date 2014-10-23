@@ -1,5 +1,10 @@
 /*Estilos general para platilla base IGP*/
 /*cabecera */
+.two-third {
+	width: auto !important;
+	float:right !important;
+}
+
 #header-igp{
     display: block;
     height: 79px;

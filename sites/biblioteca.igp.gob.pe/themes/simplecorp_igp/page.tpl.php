@@ -5,11 +5,7 @@
     <div id="page">
 
         <!-- header -->
-
-
-
         <header role="header" class="container clearfix">
-
             <!-- #pre-header -->
 
             <div id="pre-header" class="clearfix">
@@ -17,7 +13,6 @@
                 <?php if ($page['header']) :?>
                 <?php print render($page['header']); ?>
                 <?php endif; ?>
-
                 <div id="header-igp">
                     <div id="logo-minam">
                         <?php if (theme_get_setting('l_minam_igp_area')== ''):?>
@@ -29,7 +24,6 @@
                     <div id="logo-igp"><a href="http://www.igp.gob.pe" target="_blank" rel="IGP" title="Portal web - IGP"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/igp-logo.png"></a></div>
                 </div>
 
-
             </div>
             <!-- EOF: #pre-header -->
 
@@ -37,28 +31,7 @@
             <!-- #header -->
             <div id="header" class="clearfix">
 
-
                 <!-- #header-left -->
-                <div id="header-left" class="one-third">
-                    <?php if ($logo): ?>
-                    <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"> <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-                    <?php endif; ?>
-
-                    <?php if ($site_name || $site_slogan): ?>
-                        <!-- #name-and-slogan -->
-                        <hgroup id="name-and-slogan">
-                            <?php if ($site_name):?>
-                            <h1 id="site-name"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h1>
-                            <?php endif; ?>
-
-                            <?php if ($site_slogan):?>
-                            <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-                            <?php endif; ?>
-                        </hgroup>
-                        <!-- EOF:#name-and-slogan -->
-                    <?php endif; ?>
-
-                </div>
                 <!--EOF: #header-left -->
 
                 <!-- #header-right -->
@@ -120,53 +93,30 @@
 
                 <?php if (theme_get_setting('slideshow_display','simplecorp')): ?>
 
-                    <!--?php if ($is_front): ?-->
+                    <?php if ($is_front): ?>
                     <!-- #slider-container -->
-                    <div id="slider-container">
-                        <div class="flexslider loading">
-                            <ul class="slides">
 
-                                <!-- first-slide -->
-                                <li class="slider-item">
-                                    <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img1.jpg" alt="" /></a>
-                                    </div>
-                                    <div class="flex-caption">
-                                        <h3>Service 1</h3>
-                                    </div>
-                                </li>
-
-                                <!-- second-slide -->
-                                <li class="slider-item">
-                                    <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img2.jpg" alt="" /></a>
-                                    </div>
-                                    <div class="flex-caption">
-                                        <h3>Service 2</h3>
-                                    </div>
-                                </li>
-
-                                <!-- third-slide -->
-                                <li class="slider-item">
-                                    <div class="slider-image">
-                                        <a href="<?php print base_path();?>"><img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/img3.jpg" alt="" /></a>
-                                    </div>
-                                    <div class="flex-caption">
-                                        <h3>Service 3</h3>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
                     <!-- EOF: #slider-container -->
-                    <!--?php endif; ?-->
+                    <?php endif; ?>
 
+                <?php endif; ?>
+                <?php if (theme_get_setting('social_icons_display','simplecorp')): ?>
+                    <!-- #social-icons -->
+                    <?php if ($is_front): ?>
+                        <!--div id="social-icons" class="clearfix">
+                            <ul id="social-links">
+                                <li class="facebook-link"><a href="https://www.facebook.com/morethan.just.themes" class="facebook" id="social-01" title="Join Us on Facebook!">Facebook</a></li>
+                                <li class="twitter-link"><a href="https://twitter.com/morethanthemes" class="twitter" id="social-02" title="Follow Us on Twitter">Twitter</a></li>
+                                <li class="google-link"><a href="#" id="social-03" title="Google" class="google">Google</a></li>
+                                <li class="dribbble-link"><a href="#" id="social-04" title="Dribble" class="dribbble">Dribble</a></li>
+                            </ul>
+                        </div-->
+                    <?php endif ?>
+                    <!-- EOF: #social-icons -->
                 <?php endif; ?>
 
             </div>
             <!-- EOF: #banner -->
-
             <?php if ($page['social_media']) :?>
                 <!--.social media-->
                 <div class="container clearfix">
@@ -185,10 +135,14 @@
             <?php endif; ?>
 
             <!--#featured -->
+
             <div id="featured">
 
                 <?php if ($page['highlighted']): ?>
-                <div class="container clearfix"><?php print render($page['highlighted']); ?></div>
+                <div class="container clearfix">
+                    <div class="line-featured"> </div>
+                    <?php print render($page['highlighted']); ?>
+                </div>
                 <?php endif; ?>
 
                 <?php if (theme_get_setting('highlighted_display','simplecorp')): ?>
@@ -197,53 +151,6 @@
 
                     <div class="container clearfix">
 
-                        <!--featured-item -->
-                        <div class="one-half">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-01.png" class="img-align-left" alt="" />
-                            <a href="./node/6"><h3>Destacado 1</h3></a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque fugit possimus ipsa sed dicta eos, delectus numquam, aliquid repellat? Aliquam.</p>
-                            <div class="readmore">
-                                <a href="./node/6">Leer mas</a>
-                            </div>
-                        </div>
-                        <!--EOF: featured-item -->
-
-                        <!--featured-item -->
-                        <div class="one-half last">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-02.png" class="img-align-left" alt="" />
-                            <a href="./node/4"><h3>Destacado 2</h3></a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo alias cupiditate, laudantium veniam dolores quidem tempora vero repudiandae totam?.</p>
-                            <div class="readmore">
-                                <a href="./node/4">Leer mas</a>
-                            </div>
-                        </div>
-                        <!--EOF: featured-item -->
-
-                    </div>
-
-                    <div class="container clearfix">
-
-                        <!--featured-item -->
-                        <div class="one-half">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-03.png" class="img-align-left" alt="" />
-                            <a href="./node/5"><h3>Destacado 3</h3></a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae recusandae maiores ab laborum cumque aliquam, quia vel eius dolore quidem cum ex.</p>
-                            <div class="readmore">
-                                <a href="./node/5">Leer mas</a>
-                            </div>
-                        </div>
-                        <!--EOF: featured-item -->
-
-                        <!--featured-item -->
-                        <div class="one-half last">
-                            <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/featured-img-04.png" class="img-align-left" alt="" />
-                            <a href="./node/3"><h3>Destacado 4</h3></a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus accusamus a, ratione dolorem ducimus culpa. Ullam, adipisci, eaque! Placeat nam veniam ex cumque.</p>
-                            <div class="readmore">
-                                <a href="./node/3">Leer mas</a>
-                            </div>
-                        </div>
-                        <!--EOF: featured-item -->
 
                     <div class="horizontal-line"> </div>
 
@@ -317,172 +224,9 @@
 
                     <?php if ($is_front): ?>
 
-                    <h3>Bibliotecas </h3>
-
-                    <ul id="projects-carousel" class="projects-carousel loading">
-
-                        <!-- PROJECT ITEM STARTS -->
-                        <!-- calendario SUM-->
-
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://10.10.30.17/inventario/" target="_blank" title="Ir al módulo de inventario">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/roj-logo.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                 Radio Observatorio de Jicamarca
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://www.igp.gob.pe/cndgdocs/" target="_blank" title="Ir al módulo repositorio de documentos ">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-                                               <img src="<?php print base_path() . drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/igp-hcyo-logo.jpg" alt="" width="220"  class="portfolio-img" />
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                 Observatorio de Huancayo
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="/cndg/base-ip/publica" target="_blank" title="Base de datos direcciones IP ">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/igp-arequipa-logo.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                 Observatorio de Arequipa
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://www.ipen.gob.pe/site/capa_nuclear/A-serv_bibliog.html" target="_blank" title="Ir al módulo PPR ">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/ipen_logo.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                 IPEN
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://www.senamhi.gob.pe/?p=0606" target="_blank" title="Ir a la biblioteca ">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/senamhi_logo.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                 SENAMHI
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://bvcyt.concytec.gob.pe/" target="_blank" title="Ir a la biblioteca de Concytec ">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/concytec_logo.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                 CONCYTEC
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-content">
-                                <div class="link-holder">
-                                    <a href="http://www.imarpe.pe/imarpe/index.php?id_seccion=I0115000000000000000000" target="_blank" title="Ir a la biblioteca de IMARPE ">
-                                        <div class="portfolio-item-holder">
-                                            <div class="portfolio-item-hover-content">
-
-                                               <img src="<?php print base_path(). drupal_get_path('theme', 'simplecorp') ;?>/images/sampleimages/imarpe_logo.jpg" alt="" width="220"  class="portfolio-img" />
-
-                                                <!-- <div class="hover-options"></div> -->
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <p>
-                                                 IMARPE
-                                            </p>
-
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
-
+                    <?php endif; ?>
 
                 <?php endif; ?>
-
-            <?php endif; ?>
 
             </div>
             <!-- EOF: #bottom-content -->
