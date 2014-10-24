@@ -73,6 +73,12 @@ if (theme_get_setting('slideshow_js','simplecorp')):
                 }
               });
 	    }
+	if (jQuery(".field-name-field-imagen-gallery .field-item").length){
+            jQuery(".field-name-field-imagen-gallery .field-item").each(function(){
+                titulo = jQuery(this).find(\'img\').attr(\'title\');
+                jQuery(this).find(\'img\').after(\'<span class="gallery_title">\'+titulo+\'</span>\');
+            });
+        };
         });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
     );
 
