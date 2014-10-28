@@ -6,3 +6,7 @@
 	height: 155px !important;
 	}
 }
+body .view-features-articles .views-row {
+	width: 88%;
+	height: 215px;
+}
