@@ -10,3 +10,27 @@ body .view-features-articles .views-row {
 	width: 88%;
 	height: 215px;
 }
+#main-content li.icon {
+  background: url(../images/icons-service.png) no-repeat;
+  padding: 0.4em 0 0.7em 3em;
+  margin-top: 1em;
+}
+#main-content .icon.icon-printer-color{
+  background-position:0 0; 
+}
+#main-content .icon.icon-printer{ 
+  background-position:0 -30px; 
+}
+#main-content .icon.icon-scan{ 
+  background-position:0 -60px; 
+}
+#main-content .icon.icon-copy{ 
+  background-position:0 -90px; 
+}
+#main-content .icon.icon-wiffi{ 
+  background-position:0 -120px; 
+}
+
+
+
+
