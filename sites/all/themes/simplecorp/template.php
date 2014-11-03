@@ -92,6 +92,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/plugins/jquery.jcarousel.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/jquery.easing-1.3.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/datatable/jquery.dataTables.min.js');
+    drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/smoothzoom/jquery.smoothzoom.js');
 
     //Initialize slideshow using theme settings
     $carousel_effect_time=theme_get_setting('carousel_effect_time','simplecorp')*1000;
@@ -165,7 +166,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
                     }
                 },
             });
-
+            //jQuery(".cboxPhoto").smoothZoom({width: 900,  height: 595});
             var currentWindowWidth = jQuery(window).width();
             jQuery(window).resize(function() {
                 currentWindowWidth = jQuery(window).width();
