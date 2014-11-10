@@ -203,6 +203,9 @@ margin-top: -8px;
 #logo-minam img {
     height:51px;
 }
+.view-content .gallery-igp li {
+   font-weight:bold;
+}
 .field-name-field-imagen-gallery .field-item, body .gallery-igp li	{
         list-style:none;
 	display: inline-block;
@@ -222,10 +225,12 @@ body .gallery-igp li, .content .gallery-igp li{
 	float: left;
 	width: 185px;
 	height: 195px;
+        text-align:center;
 }
 .field-name-field-imagen-gallery .field-item{
 	box-shadow:0 8px 16px rgba(0,0,0,0.6);
         margin: 0.5em 1em;
+        width:180px;
 }
 body .gallery-igp li:hover {
 	border-radius: 3px;
@@ -242,7 +247,8 @@ body .gallery-igp li:hover {
 }
 #main-content .gallery_title {
 	color: #9dcedf;
-	}
+        text-align:center;
+}
 .gallery_title{
 	display: block;
 	font-size: 16px;
@@ -250,6 +256,10 @@ body .gallery-igp li:hover {
 	background: url("../images/caption-bg.png") repeat;
 	margin-top: -6px;
 	padding: 0.2em 0.4em;
+}
+#node-119 ul.gallery-igp {
+	margin: auto;
+	width: 480px;
 }
 .content .gallery-igp li span{	
 	text-align: center;

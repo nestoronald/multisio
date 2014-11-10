@@ -9,7 +9,7 @@
  *   The form state.
  */
 function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
-
+   
     $form['mtt_settings'] = array(
         '#type' => 'fieldset',
         '#title' => t('SimpleCorp Theme Settings'),
@@ -26,6 +26,13 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
         '#title' => t('Look\'n\'Feel'),
         '#collapsible' => TRUE,
         '#collapsed' => FALSE,
+    );
+
+    $form['mtt_settings']['tabs']['looknfeel']['theme_colors'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Color Schemes'),
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
     );
     $form['mtt_settings']['tabs']['cabecera'] = array(
         '#type' => 'fieldset',
@@ -47,13 +54,6 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
             'file_validate_size' => array('MAX_FILE_SIZE' * 1200 * 300),
           ),
 
-    );
-
-    $form['mtt_settings']['tabs']['looknfeel']['theme_colors'] = array(
-        '#type' => 'fieldset',
-        '#title' => t('Color Schemes'),
-        '#collapsible' => TRUE,
-        '#collapsed' => TRUE,
     );
 
     $form['mtt_settings']['tabs']['looknfeel']['theme_colors']['theme_color'] = array(
@@ -120,7 +120,7 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
         '#collapsible' => TRUE,
         '#collapsed' => FALSE,
     );
-
+    
     $form['mtt_settings']['tabs']['plugins']['header_tooltip'] = array(
         '#type' => 'fieldset',
         '#title' => t('Social Icons'),
@@ -175,7 +175,7 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
         '#title' => t('Include Slideshow javascript code'),
         '#description'   => t('Use the checkbox to include or not the javascript code (Flexslider) for the Slideshow. <br>More info <a href="http://flexslider.woothemes.com/" target="_blank">http://flexslider.woothemes.com</a>.'),
         '#default_value' => theme_get_setting('slideshow_js','simplecorp'),
-    );
+    );    
 
     $form['mtt_settings']['tabs']['plugins']['slideshow']['slideshow_effect'] = array(
         '#type' => 'select',
@@ -312,7 +312,7 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
         '#title' => t('Include quicksand javascript code'),
         '#description'   => t('Use the checkbox to include or not the quicksand javascript code in order to reorder and filter portofolio items with a nice shuffling animation [<em>simplecorp/js/plugins/quicksand.js</em> & <em>simplecorp/js/plugins/quicksand_initialize.js</em>]. <br>More info <a href="http://razorjack.net/quicksand/" target="_blank">http://razorjack.net/quicksand</a>.'),
         '#default_value' => theme_get_setting('quicksand_js','simplecorp'),
-    );
+    );    
 
     $form['mtt_settings']['tabs']['plugins']['prettyphoto'] = array(
         '#type' => 'fieldset',
@@ -445,28 +445,28 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
         '#collapsible' => TRUE,
         '#collapsed' => FALSE,
     );
-
+	
 	$form['mtt_settings']['tabs']['support']['responsive']['responsive_menu'] = array(
 		'#type' => 'fieldset',
 		'#title' => t('Responsive menu'),
 		'#collapsible' => TRUE,
 		'#collapsed' => TRUE,
 	);
-
+	
 	$form['mtt_settings']['tabs']['support']['responsive']['responsive_menu']['responsive_menu_state'] = array(
 		'#type' => 'checkbox',
 		'#title' => t('Enable responsive menu'),
 		'#description'   => t('Use the checkbox to enable the plugin which transforms the Main menu of your site to a dropdown select list when your browser is at mobile widths.'),
 		'#default_value' => theme_get_setting('responsive_menu_state', 'simplecorp'),
 	);
-
+	
 	$form['mtt_settings']['tabs']['support']['responsive']['responsive_menu']['responsive_menu_switchwidth'] = array(
 		'#type' => 'textfield',
 		'#title' => t('Switch width (px)'),
 		'#description'   => t('Set the width (in pixels) at which the Main menu of the site will change to a dropdown select list.'),
 		'#default_value' => theme_get_setting('responsive_menu_switchwidth', 'simplecorp'),
 	);
-
+	
 	$form['mtt_settings']['tabs']['support']['responsive']['responsive_menu']['responsive_menu_topoptiontext'] = array(
 		'#type' => 'textfield',
 		'#title' => t('Top option text'),
@@ -487,8 +487,4 @@ function simplecorp_form_system_theme_settings_alter(&$form, &$form_state) {
         '#description'   => t('IE 6-8 require a JavaScript polyfill solution to add basic support of CSS3 media queries. Note that you should enable <strong>Aggregate and compress CSS files</strong> through <em>/admin/config/development/performance</em>.'),
     );
 
-    //$form['#submit'][] = 'simplecorp_system_theme_settings_form_submit';
 }
-
-
-

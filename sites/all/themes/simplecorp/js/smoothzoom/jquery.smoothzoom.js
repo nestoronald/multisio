@@ -2,15 +2,15 @@
 	Smooth Zoom Pan - jQuery Image Viewer
  	Copyright (c) 2011 Alban Xhaferllari
 	http://albanx.com
-	
-	Version: 1.1 
+
+	Version: 1.1
 	19 OCT 2011
-	
+
 	Built using:
 	jQuery 		version:1.6.2	http://jquery.com/
 	Modernizr 	version:2.0.6	http://www.modernizr.com/
 	MouseWheel	version:3.0.2	http://brandonaaron.net/code/mousewheel/docs
-	
+
 */
 
 (function ($) {
@@ -83,7 +83,7 @@
 		var zoom_show = op.zoom_BUTTONS_SHOW ? op.zoom_BUTTONS_SHOW === true ? true : op.zoom_BUTTONS_SHOW.toLowerCase() == 'yes' || op.zoom_BUTTONS_SHOW.toLowerCase() == 'true' ? true : false : false;
 
 		var pan_speed_o = op.animation_SPEED;
-		
+
 		var pan_show = op.pan_BUTTONS_SHOW ? op.pan_BUTTONS_SHOW === true ? true : op.pan_BUTTONS_SHOW.toLowerCase() == 'yes' || op.pan_BUTTONS_SHOW.toLowerCase() == 'true' ? true : false : false;
 		var pan_limit = op.pan_LIMIT_BOUNDARY ? op.pan_LIMIT_BOUNDARY === true ? true : op.pan_LIMIT_BOUNDARY.toLowerCase() == 'yes' || op.pan_LIMIT_BOUNDARY.toLowerCase() == 'true' ? true : false : false;
 
@@ -93,7 +93,7 @@
 		var bu_bg_alpha = op.button_BG_TRANSPARENCY / 100;
 		var bu_icon = op.button_ICON_IMAGE;
 		var bu_auto = op.button_AUTO_HIDE ? op.button_AUTO_HIDE === true ? true : op.button_AUTO_HIDE.toLowerCase() == 'yes' || op.button_AUTO_HIDE.toLowerCase() == 'true' ? true : false : false;
-		
+
 		var bu_delay = op.button_AUTO_HIDE_DELAY * 1000;
 		var bu_align = op.button_ALIGN.toLowerCase().split(' ');
 		var bu_margin = op.button_MARGIN;
@@ -114,7 +114,7 @@
 
 		var full_BROWSER_HO = op.full_BROWSER_HEIGHT_OFF;
 
-		//Vars for inner operation				
+		//Vars for inner operation
 		var rF = 1;
 		var rA = 1;
 		var iW = 0;
@@ -158,7 +158,7 @@
 		var _wheel = false;
 		var _recent = 'zoomOut';
 
-		
+
 		var cFlag = {
 			_zi: false,
 			_zo: false,
@@ -169,13 +169,13 @@
 			_rs: false,
 			_nd: false
 		};
-		
+
 		var $holder;
-		var $hitArea;	
+		var $hitArea;
 		var $controls;
 		var buttons = [];
-		
-		var buttons_total;		
+
+		var buttons_total;
 		var cButtId = 0;
 		var cBW;
 		var cBH;
@@ -190,7 +190,7 @@
 		var map_coordinates = [];
 		var mapAreas;
 		var icons;
-		
+
 		var dbl_click_dir = 1;
 		var id = $image.attr('id');
 
@@ -363,13 +363,13 @@
 			iW = $image.width();
 			iH = $image.height();
 
-			//Initially the image needs to be resized to fit container. To do so, first measure the scaledown ratio	
+			//Initially the image needs to be resized to fit container. To do so, first measure the scaledown ratio
 			checkRatio();
 
 			//If NO Minimum zoom value set
 			if (zoom_min == 0 || init_zoom != 0) {
 				rA = _sc = init_zoom != '' ? init_zoom : rF;
-				
+
 			//If Minimum zoom value set
 			} else {
 				rA = _sc = rF = zoom_min;
@@ -393,7 +393,7 @@
 			//Pan speed will vary according to application dimension
 			pan_speed = Math.max(1, ((sW + sH) / 500)) - 1 + (pan_speed_o * pan_speed_o / 4) + 2;
 			if (!pan_limit || _moveCursor || init_zoom != rF) $image.css('cursor', 'move'), $hitArea.css('cursor', 'move');
-			
+
 			//Start displaying the image
 			$image.css({
 				position: 'relative',
@@ -401,13 +401,13 @@
 				left: '0px',
 				top: '0px'
 			}).hide().fadeIn(500, function () {
-				loadingLoop.destroy();				
-				loadingLoop = null;				
+				loadingLoop.destroy();
+				loadingLoop = null;
 			});
-			
+
 			//Create Control buttons and events
 			addControls();
-			
+
 			//Apply initial transformation
 			Animate();
 		}
@@ -472,16 +472,16 @@
 				mSize = Math.ceil(bu_size / 4),
 				iconOff = bu_size <16 ? 50 : 0;
 
-			//Show all buttons			
+			//Show all buttons
 			if (pan_show) {
 				if (zoom_show) {
 					cBW = parseInt(bu_size + (bu_size * .85) + ((bu_size - sDiff) * 3) + (bSpace * 2) + (mSize * 2));
 				} else {
-					cBW = parseInt(((bu_size - sDiff) * 3) + (bSpace * 2) + (mSize * 2));					
+					cBW = parseInt(((bu_size - sDiff) * 3) + (bSpace * 2) + (mSize * 2));
 				}
 				cBH = parseInt(((bu_size - sDiff) * 3) + (bSpace * 2) + (mSize * 2));
 
-			//Show zoom buttons only			
+			//Show zoom buttons only
 			} else {
 				if (zoom_show) {
 					cBW = parseInt(bu_size + mSize * 2);
@@ -501,7 +501,7 @@
 				y: (cBH / 2) - ((bu_size - (pan_show ? sDiff : 0)) / 2)
 			};
 
-			//Buttons Container		
+			//Buttons Container
 			$controls = $('<div></div>').appendTo($holder).css({
 				position: 'absolute',
 				width: cBW + 'px',
@@ -552,7 +552,7 @@
 				roundBG($controlsBg, 'cBg', cBW, cBH, iconOff>0 ? 4 : 5, 375, bu_bg, bu_icon, 1, iconOff? 50 : 0);
 			}
 
-			//Generating Button properties	(7 buttons)			
+			//Generating Button properties	(7 buttons)
 			buttons[0] = {
 				_var: '_zi',
 				l: mSize,
@@ -572,7 +572,7 @@
 				bx: -iSize - pOff,
 				by: -pOff-iconOff
 			};
-			
+
 			buttons[2] = {
 				_var: '_mr',
 				l: resetCenter.x - (bu_size - sDiff) - bSpace,
@@ -622,7 +622,7 @@
 				bx: -(sDiff / 2) - iSize * 6 - pOff,
 				by: -(sDiff / 2) - pOff - iconOff
 			};
-			
+
 
 			buttons_total = buttons.length;
 			for (var i = 0; i < buttons_total; i++) {
@@ -866,7 +866,7 @@
 				!_playing ? Animate() : "";
 				return false;
 
-			//Touch				
+			//Touch
 			} else {
 				e.preventDefault();
 				setDraggedPos(e.originalEvent.changedTouches[0].pageX - $holder.offset().left - offX, e.originalEvent.changedTouches[0].pageY - $holder.offset().top - offY, _sc);
@@ -886,7 +886,7 @@
 
 			} else if (drDown) {
 				if (mouse_drag) {
-					//Mouse					
+					//Mouse
 					if (e.type == 'mouseup') {
 						$(document).unbind('mousemove.smoothZoom' + id);
 						_recent = 'drag';
@@ -978,7 +978,7 @@
 				} else {
 					dX = dX + (s * iW) < sW / 2 ? (sW / 2) - (s * iW) : dX;
 					dX = dX > sW / 2 ? sW / 2 : dX;
-	
+
 				}
 			}
 			if (yp !== '') {
@@ -1135,13 +1135,13 @@
 					oX < -limitX - focusOffX ? oX = -limitX - focusOffX : "";
 					oX > limitX - focusOffX ? oX = limitX - focusOffX : "";
 					if (_w<sW) {
-						tX = (sW-_w)/2;						
+						tX = (sW-_w)/2;
 						changeOffset(true,false);
 					}
 					oY < -limitY - focusOffY ? oY = -limitY - focusOffY : "";
 					oY > limitY - focusOffY ? oY = limitY - focusOffY : "";
 					if (_h<sH) {
-						tY = (sH-_h)/2;			
+						tY = (sH-_h)/2;
 						changeOffset(false,true);
 					}
 				} else {
@@ -1262,12 +1262,12 @@
 			}
 
 			//Apply Scale and position to the image:
-			//1. If the browser suppports css 3D transformation, go this way (For best performance enabling hardware acceleration)		
+			//1. If the browser suppports css 3D transformation, go this way (For best performance enabling hardware acceleration)
 			if (use_trans3D) {
 				$image.css(prop_origin, 'left top');
 				$image.css(prop_transform, 'translate3d(' + _x + 'px,' + _y + 'px,0) scale(' + _sc + ')');
 
-			//2. If the browser suppports only 2D transformation, go this way	
+			//2. If the browser suppports only 2D transformation, go this way
 			} else if (use_trans2D) {
 				$image.css(prop_origin, 'left top');
 				$image.css(prop_transform, 'translate(' + _x + 'px,' + _y + 'px) scale(' + _sc + ')');
@@ -1287,14 +1287,14 @@
 				map_coordinates.length > 0 ? updateMap() : "";
 			}
 
-			//If the animation completed, stop running; else continue	
+			//If the animation completed, stop running; else continue
 			if (ani_end && _playing && !_dragging && _recent != "drag") {
 				_playing = false;
 				_recent = '';
 				clearTimeout(ani_timer);
 			} else {
 				_playing = true;
-				ani_timer = setTimeout(Animate, 28);					
+				ani_timer = setTimeout(Animate, 28);
 			}
 		}
 
@@ -1388,27 +1388,27 @@
 				$controls = undefined;
 			} else {
 				$image.show();
-			} 
+			}
 			$image.unbind('load');
 			$(icons).unbind('load.smoothZoom onreadystatechange.smoothZoom');
-			$image.insertBefore($holder);				
+			$image.insertBefore($holder);
 			$holder !== undefined ? $holder.remove() : "";
 			$image.removeData('smoothZoom');
 			$holder = undefined;
 			Buttons = undefined;
 			op = undefined;
 			$image = undefined;
-				
+
 		}
 
 		//Method to change focus point and level
-		this.focusTo = function (params) {			
+		this.focusTo = function (params) {
 			if (_mainLoaded && _iconLoaded) {
-				if (params.zoom === undefined || params.zoom === '' || params.zoom == 0) {				
+				if (params.zoom === undefined || params.zoom === '' || params.zoom == 0) {
 					params.zoom = rA;
 				} else {
 					params.zoom /= 100;
-				}			
+				}
 				_onfocus = true;
 				if (params.zoom > rA && rA != zoom_max) {
 					rA = params.zoom;
@@ -1424,29 +1424,29 @@
 				Animate();
 			}
 		}
-		
-		this.zoomIn = function (params) {	
-			buttons[0].$ob.trigger('mousedown.smoothZoom', {id:0});				
+
+		this.zoomIn = function (params) {
+			buttons[0].$ob.trigger('mousedown.smoothZoom', {id:0});
 		}
-		this.zoomOut = function (params) {	
-			buttons[1].$ob.trigger('mousedown.smoothZoom', {id:1});				
-		}		
-		this.moveRight = function (params) {	
-			buttons[2].$ob.trigger('mousedown.smoothZoom', {id:2});				
+		this.zoomOut = function (params) {
+			buttons[1].$ob.trigger('mousedown.smoothZoom', {id:1});
 		}
-		this.moveLeft = function (params) {	
-			buttons[3].$ob.trigger('mousedown.smoothZoom', {id:3});				
+		this.moveRight = function (params) {
+			buttons[2].$ob.trigger('mousedown.smoothZoom', {id:2});
 		}
-		this.moveUp = function (params) {	
-			buttons[4].$ob.trigger('mousedown.smoothZoom', {id:4});				
+		this.moveLeft = function (params) {
+			buttons[3].$ob.trigger('mousedown.smoothZoom', {id:3});
 		}
-		this.moveDown = function (params) {	
-			buttons[5].$ob.trigger('mousedown.smoothZoom', {id:5});				
+		this.moveUp = function (params) {
+			buttons[4].$ob.trigger('mousedown.smoothZoom', {id:4});
 		}
-		this.Reset = function (params) {	
-			buttons[6].$ob.trigger('mousedown.smoothZoom', {id:6});				
+		this.moveDown = function (params) {
+			buttons[5].$ob.trigger('mousedown.smoothZoom', {id:5});
 		}
-		
+		this.Reset = function (params) {
+			buttons[6].$ob.trigger('mousedown.smoothZoom', {id:6});
+		}
+
 		init();
 	}
 
@@ -1493,15 +1493,15 @@
 			var $image = $(this);
 			var instance = $image.data('smoothZoom');
 			if (!instance) {
-				
+
 				//Initiate the plugin
 				if (typeof params === 'object' || !params){
-					$image.data('smoothZoom',  new zoomer($image, params));	
+					$image.data('smoothZoom',  new zoomer($image, params));
 				}
 			} else {
-				
+
 				//Calling methods: destroy() || focusTo({x, y, zoom})
-				if (instance[params]) {					
+				if (instance[params]) {
 					instance[params].apply(this, Array.prototype.slice.call(args, 1));
 				}
 			}
@@ -1518,18 +1518,18 @@
 	var Modernizr=function(a,b,c){function C(a,b){var c=a.charAt(0).toUpperCase()+a.substr(1),d=(a+" "+n.join(c+" ")+c).split(" ");return B(d,b)}function B(a,b){for(var d in a)if(j[a[d]]!==c)return b=="pfx"?a[d]:!0;return!1}function A(a,b){return!!~(""+a).indexOf(b)}function z(a,b){return typeof a===b}function y(a,b){return x(m.join(a+";")+(b||""))}function x(a){j.cssText=a}var d="2.0.6",e={},f=b.documentElement,g=b.head||b.getElementsByTagName("head")[0],h="modernizr",i=b.createElement(h),j=i.style,k,l=Object.prototype.toString,m=" -webkit- -moz- -o- -ms- -khtml- ".split(" "),n="Webkit Moz O ms Khtml".split(" "),o={},p={},q={},r=[],s=function(a,c,d,e){var g,i,j,k=b.createElement("div");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),k.appendChild(j);g=["&shy;","<style>",a,"</style>"].join(""),k.id=h,k.innerHTML+=g,f.appendChild(k),i=c(k,a),k.parentNode.removeChild(k);return!!i},t=function(){function d(d,e){e=e||b.createElement(a[d]||"div"),d="on"+d;var f=d in e;f||(e.setAttribute||(e=b.createElement("div")),e.setAttribute&&e.removeAttribute&&(e.setAttribute(d,""),f=z(e[d],"function"),z(e[d],c)||(e[d]=c),e.removeAttribute(d))),e=null;return f}var a={select:"input",change:"input",submit:"form",reset:"form",error:"img",load:"img",abort:"img"};return d}(),u,v={}.hasOwnProperty,w;!z(v,c)&&!z(v.call,c)?w=function(a,b){return v.call(a,b)}:w=function(a,b){return b in a&&z(a.constructor.prototype[b],c)};var D=function(c,d){var f=c.join(""),g=d.length;s(f,function(c,d){var f=b.styleSheets[b.styleSheets.length-1],h=f.cssRules&&f.cssRules[0]?f.cssRules[0].cssText:f.cssText||"",i=c.childNodes,j={};while(g--)j[i[g].id]=i[g];e.touch="ontouchstart"in a||j.touch.offsetTop===9,e.csstransforms3d=j.csstransforms3d.offsetLeft===9},g,d)}([,["@media (",m.join("touch-enabled),("),h,")","{#touch{top:9px;position:absolute}}"].join(""),["@media (",m.join("transform-3d),("),h,")","{#csstransforms3d{left:9px;position:absolute}}"].join("")],[,"touch","csstransforms3d"]);o.touch=function(){return e.touch},o.borderradius=function(){return C("borderRadius")},o.csstransforms=function(){return!!B(["transformProperty","WebkitTransform","MozTransform","OTransform","msTransform"])},o.csstransforms3d=function(){var a=!!B(["perspectiveProperty","WebkitPerspective","MozPerspective","OPerspective","msPerspective"]);a&&"webkitPerspective"in f.style&&(a=e.csstransforms3d);return a};for(var E in o)w(o,E)&&(u=E.toLowerCase(),e[u]=o[E](),r.push((e[u]?"":"no-")+u));x(""),i=k=null,e._version=d,e._prefixes=m,e._domPrefixes=n,e.hasEvent=t,e.testProp=function(a){return B([a])},e.testAllProps=C,e.testStyles=s,e.prefixed=function(a){return C(a,"pfx")};return e}(this,this.document);
 
 //Old Browsers need special attention
-//var FF2 = $.browser.mozilla && (parseFloat($.browser.version) < 1.9) ? true : false;
-//var IE6 = $.browser.msie && parseInt($.browser.version, 10) <=6 ? true : false;
+var FF2 = $.browser.mozilla && (parseFloat($.browser.version) < 1.9) ? true : false;
+var IE6 = $.browser.msie && parseInt($.browser.version, 10) <=6 ? true : false;
 
 var prop_transform = Modernizr.prefixed('transform');
 var prop_origin = Modernizr.prefixed('transformOrigin');
-//var use_trans2D = Modernizr.csstransforms && prop_transform !== false && prop_origin !== false && !$.browser.mozilla ? true : false;
+var use_trans2D = Modernizr.csstransforms && prop_transform !== false && prop_origin !== false && !$.browser.mozilla ? true : false;
 var use_trans3D = Modernizr.csstransforms3d && prop_transform !== false && prop_origin !== false ? true : false;
-//var use_bordRadius = $.browser.mozilla && FF2 ? false : Modernizr.borderradius;
-//var use_pngTrans = IE6 ? false : true;
+var use_bordRadius = $.browser.mozilla && FF2 ? false : Modernizr.borderradius;
+var use_pngTrans = IE6 ? false : true;
 
 //For mouse wheel support
-	
+
 	/* Copyright (c) 2009 Brandon Aaron (http://brandonaaron.net)
 	 * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
 	 * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
@@ -1537,7 +1537,7 @@ var use_trans3D = Modernizr.csstransforms3d && prop_transform !== false && prop_
 	 * Thanks to: Mathias Bank(http://www.mathias-bank.de) for a scope bug fix.
 	 *
 	 * Version: 3.0.2
-	 * 
+	 *
 	 * Requires: 1.2.2+
 	 */
 (function(c){var a=["DOMMouseScroll","mousewheel"];c.event.special.mousewheel={setup:function(){if(this.addEventListener){for(var d=a.length;d;){this.addEventListener(a[--d],b,false)}}else{this.onmousewheel=b}},teardown:function(){if(this.removeEventListener){for(var d=a.length;d;){this.removeEventListener(a[--d],b,false)}}else{this.onmousewheel=null}}};c.fn.extend({mousewheel:function(d){return d?this.bind("mousewheel",d):this.trigger("mousewheel")},unmousewheel:function(d){return this.unbind("mousewheel",d)}});function b(f){var d=[].slice.call(arguments,1),g=0,e=true;f=c.event.fix(f||window.event);f.type="mousewheel";if(f.wheelDelta){g=f.wheelDelta/120}if(f.detail){g=-f.detail/3}d.unshift(f,g);return c.event.handle.apply(this,d)}})(jQuery);
