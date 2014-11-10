@@ -41,7 +41,7 @@
 			button_COLOR			: '#FFFFFF',
 			button_BG_COLOR			: '#000000',
 			button_BG_TRANSPARENCY	: 55,
-			button_ICON_IMAGE		: 'zoom_assets/icons.png',
+			button_ICON_IMAGE		: '/sites/all/libraries/zoom_assets/icons.png',
 			button_AUTO_HIDE		: 'NO',
 			button_AUTO_HIDE_DELAY	: 1,
 			button_ALIGN			: 'bottom right',
@@ -534,23 +534,23 @@
 			}).addClass('noSel');
 
 			//Make the corners rounded
-			if (use_bordRadius || !use_pngTrans || !bu_round) {
-				$controlsBg.css({
-					'opacity': bu_bg_alpha,
-					'background-color': bu_bg
-				});
-				if (use_bordRadius && bu_round) {
-					$controlsBg.css({
-						'-moz-border-radius': (iconOff>0 ? 4 : 5) +'px',
-						'-webkit-border-radius': (iconOff>0 ? 4 : 5) +'px',
-						'border-radius': (iconOff>0 ? 4 : 5) +'px',
-						'-khtml-border-radius': (iconOff>0 ? 4 : 5) +'px'
-					});
-				}
+			// if (use_bordRadius || !use_pngTrans || !bu_round) {
+			// 	$controlsBg.css({
+			// 		'opacity': bu_bg_alpha,
+			// 		'background-color': bu_bg
+			// 	});
+			// 	if (use_bordRadius && bu_round) {
+			// 		$controlsBg.css({
+			// 			'-moz-border-radius': (iconOff>0 ? 4 : 5) +'px',
+			// 			'-webkit-border-radius': (iconOff>0 ? 4 : 5) +'px',
+			// 			'border-radius': (iconOff>0 ? 4 : 5) +'px',
+			// 			'-khtml-border-radius': (iconOff>0 ? 4 : 5) +'px'
+			// 		});
+			// 	}
 
-			} else {
+			// } else {
 				roundBG($controlsBg, 'cBg', cBW, cBH, iconOff>0 ? 4 : 5, 375, bu_bg, bu_icon, 1, iconOff? 50 : 0);
-			}
+			// }
 
 			//Generating Button properties	(7 buttons)
 			buttons[0] = {
@@ -661,27 +661,27 @@
 				}).hide();
 
 				//Apply corner radius
-				if (use_bordRadius || !use_pngTrans || !bu_round) {
-					tpm.css('background', bu_color);
-					tpmo.css('background', bu_color);
-					if (use_bordRadius && bu_round) {
-						tpm.css({
-							'-moz-border-radius': '2px',
-							'-webkit-border-radius': '2px',
-							'border-radius': '2px',
-							'-khtml-border-radius': '2px'
-						});
-							tpmo.css({
-							'-moz-border-radius': '2px',
-							'-webkit-border-radius': '2px',
-							'border-radius': '2px',
-							'-khtml-border-radius': '2px'
-						});
-					}
-				} else {
+				// if (use_bordRadius || !use_pngTrans || !bu_round) {
+				// 	tpm.css('background', bu_color);
+				// 	tpmo.css('background', bu_color);
+				// 	if (use_bordRadius && bu_round) {
+				// 		tpm.css({
+				// 			'-moz-border-radius': '2px',
+				// 			'-webkit-border-radius': '2px',
+				// 			'border-radius': '2px',
+				// 			'-khtml-border-radius': '2px'
+				// 		});
+				// 			tpmo.css({
+				// 			'-moz-border-radius': '2px',
+				// 			'-webkit-border-radius': '2px',
+				// 			'border-radius': '2px',
+				// 			'-khtml-border-radius': '2px'
+				// 		});
+				// 	}
+				// } else {
 					roundBG(tpm, buttons[i]._var + "norm", buttons[i].w, buttons[i].h, 2, 425, bu_color, bu_icon, i + 1, iconOff? 50 : 0);
 					roundBG(tpmo, buttons[i]._var + "over", buttons[i].w + 2, buttons[i].h + 2, 2, 425, bu_color, bu_icon, i + 1, iconOff? 50 : 0);
-				}
+				// }
 
 				//Add the button icons
 				var cont = $('<div id="' + buttons[i]._var + '_icon"></div>').appendTo(buttons[i].$ob);
@@ -906,21 +906,21 @@
 			}
 		}
 
-		if (FF2) {
-			$(document).bind('mousemove.smoothZoom' + id + ".mmff2", function (e) {
-				mouseX = e.pageX;
-				mouseY = e.pageY;
-			});
-		}
+		// if (FF2) {
+		// 	$(document).bind('mousemove.smoothZoom' + id + ".mmff2", function (e) {
+		// 		mouseX = e.pageX;
+		// 		mouseY = e.pageY;
+		// 	});
+		// }
 		var mouseWheel = function (e, delta) {
 			if (mouse_wheel_cur) {
-				if (FF2) {
-					focusOffX = mouseX - $holder.offset().left - (sW / 2);
-					focusOffY = mouseY - $holder.offset().top - (sH / 2);
-				} else {
+				// if (FF2) {
+				// 	focusOffX = mouseX - $holder.offset().left - (sW / 2);
+				// 	focusOffY = mouseY - $holder.offset().top - (sH / 2);
+				// } else {
 					focusOffX = e.pageX - $holder.offset().left - (sW / 2);
 					focusOffY = e.pageY - $holder.offset().top - (sH / 2);
-				}
+				// }
 				changeOffset(true,true);
 			}
 			_wheel = true;
@@ -1471,7 +1471,7 @@
 			height: _spriteW + 'px',
 			top: -_spriteW / 2 + 'px',
 			left: -_spriteW / 2 + 'px',
-			'background': 'url(zoom_assets/preloader.png)'
+			'background': 'url(/sites/all/libraries/zoom_assets/preloader.png)'
 		});
 		_timer = setInterval(function () {
 			_currentX -= _spriteW;
@@ -1518,15 +1518,15 @@
 	var Modernizr=function(a,b,c){function C(a,b){var c=a.charAt(0).toUpperCase()+a.substr(1),d=(a+" "+n.join(c+" ")+c).split(" ");return B(d,b)}function B(a,b){for(var d in a)if(j[a[d]]!==c)return b=="pfx"?a[d]:!0;return!1}function A(a,b){return!!~(""+a).indexOf(b)}function z(a,b){return typeof a===b}function y(a,b){return x(m.join(a+";")+(b||""))}function x(a){j.cssText=a}var d="2.0.6",e={},f=b.documentElement,g=b.head||b.getElementsByTagName("head")[0],h="modernizr",i=b.createElement(h),j=i.style,k,l=Object.prototype.toString,m=" -webkit- -moz- -o- -ms- -khtml- ".split(" "),n="Webkit Moz O ms Khtml".split(" "),o={},p={},q={},r=[],s=function(a,c,d,e){var g,i,j,k=b.createElement("div");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:h+(d+1),k.appendChild(j);g=["&shy;","<style>",a,"</style>"].join(""),k.id=h,k.innerHTML+=g,f.appendChild(k),i=c(k,a),k.parentNode.removeChild(k);return!!i},t=function(){function d(d,e){e=e||b.createElement(a[d]||"div"),d="on"+d;var f=d in e;f||(e.setAttribute||(e=b.createElement("div")),e.setAttribute&&e.removeAttribute&&(e.setAttribute(d,""),f=z(e[d],"function"),z(e[d],c)||(e[d]=c),e.removeAttribute(d))),e=null;return f}var a={select:"input",change:"input",submit:"form",reset:"form",error:"img",load:"img",abort:"img"};return d}(),u,v={}.hasOwnProperty,w;!z(v,c)&&!z(v.call,c)?w=function(a,b){return v.call(a,b)}:w=function(a,b){return b in a&&z(a.constructor.prototype[b],c)};var D=function(c,d){var f=c.join(""),g=d.length;s(f,function(c,d){var f=b.styleSheets[b.styleSheets.length-1],h=f.cssRules&&f.cssRules[0]?f.cssRules[0].cssText:f.cssText||"",i=c.childNodes,j={};while(g--)j[i[g].id]=i[g];e.touch="ontouchstart"in a||j.touch.offsetTop===9,e.csstransforms3d=j.csstransforms3d.offsetLeft===9},g,d)}([,["@media (",m.join("touch-enabled),("),h,")","{#touch{top:9px;position:absolute}}"].join(""),["@media (",m.join("transform-3d),("),h,")","{#csstransforms3d{left:9px;position:absolute}}"].join("")],[,"touch","csstransforms3d"]);o.touch=function(){return e.touch},o.borderradius=function(){return C("borderRadius")},o.csstransforms=function(){return!!B(["transformProperty","WebkitTransform","MozTransform","OTransform","msTransform"])},o.csstransforms3d=function(){var a=!!B(["perspectiveProperty","WebkitPerspective","MozPerspective","OPerspective","msPerspective"]);a&&"webkitPerspective"in f.style&&(a=e.csstransforms3d);return a};for(var E in o)w(o,E)&&(u=E.toLowerCase(),e[u]=o[E](),r.push((e[u]?"":"no-")+u));x(""),i=k=null,e._version=d,e._prefixes=m,e._domPrefixes=n,e.hasEvent=t,e.testProp=function(a){return B([a])},e.testAllProps=C,e.testStyles=s,e.prefixed=function(a){return C(a,"pfx")};return e}(this,this.document);
 
 //Old Browsers need special attention
-var FF2 = $.browser.mozilla && (parseFloat($.browser.version) < 1.9) ? true : false;
-var IE6 = $.browser.msie && parseInt($.browser.version, 10) <=6 ? true : false;
+// var FF2 = $.browser.mozilla && (parseFloat($.browser.version) < 1.9) ? true : false;
+// var IE6 = $.browser.msie && parseInt($.browser.version, 10) <=6 ? true : false;
 
 var prop_transform = Modernizr.prefixed('transform');
 var prop_origin = Modernizr.prefixed('transformOrigin');
-var use_trans2D = Modernizr.csstransforms && prop_transform !== false && prop_origin !== false && !$.browser.mozilla ? true : false;
+// var use_trans2D = Modernizr.csstransforms && prop_transform !== false && prop_origin !== false && !$.browser.mozilla ? true : false;
 var use_trans3D = Modernizr.csstransforms3d && prop_transform !== false && prop_origin !== false ? true : false;
-var use_bordRadius = $.browser.mozilla && FF2 ? false : Modernizr.borderradius;
-var use_pngTrans = IE6 ? false : true;
+// var use_bordRadius = $.browser.mozilla && FF2 ? false : Modernizr.borderradius;
+// var use_pngTrans = IE6 ? false : true;
 
 //For mouse wheel support
 

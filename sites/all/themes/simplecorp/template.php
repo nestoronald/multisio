@@ -88,7 +88,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/jquery.easing-1.3.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/datatable/jquery.dataTables.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/smoothzoom/jquery.smoothzoom.js');
-    
+
 
     //Initialize slideshow using theme settings
     $carousel_effect_time=theme_get_setting('carousel_effect_time','simplecorp')*1000;
@@ -226,8 +226,8 @@ if (theme_get_setting('carousel_js','simplecorp')):
                         jQuery(this).html(\'<a href="\'+link+\'" target="_blank">\'+img+\'</a>\');
                     });
                     jQuery("a.colorbox").colorbox({ opacity:0.5},function(){
-                        //jQuery(".cboxPhoto").imageLens();                        
-                        //jQuery(".cboxPhoto").smoothZoom({width: "100%",  height: "100%"});
+                        //jQuery(".cboxPhoto").imageLens();
+                        jQuery(".cboxPhoto").smoothZoom({width: "100%",  height: "100%"});
                     });
 
 
