@@ -162,7 +162,6 @@ if (theme_get_setting('carousel_js','simplecorp')):
                     }
                 },
             });
-            //jQuery(".cboxPhoto").smoothZoom({width: 900,  height: 595});
             var currentWindowWidth = jQuery(window).width();
             jQuery(window).resize(function() {
                 currentWindowWidth = jQuery(window).width();
@@ -225,11 +224,12 @@ if (theme_get_setting('carousel_js','simplecorp')):
                         link = jQuery(\'.views-field-field-enlace  a\').eq(i).attr(\'href\');
                         jQuery(this).html(\'<a href="\'+link+\'" target="_blank">\'+img+\'</a>\');
                     });
-                    jQuery("a.colorbox").colorbox({ opacity:0.5},function(){
-                        //jQuery(".cboxPhoto").imageLens();
-                        jQuery(".cboxPhoto").smoothZoom({width: "100%",  height: "100%"});
-                    });
-
+                    if (jQuery("a.colorbox").length) {
+                        jQuery("a.colorbox").colorbox({ opacity:0.5},function(){
+                            //jQuery(".cboxPhoto").imageLens();
+                            jQuery(".cboxPhoto").smoothZoom({width: "100%",  height: "100%"});
+                        });
+                    }
 
                 })();
             });
