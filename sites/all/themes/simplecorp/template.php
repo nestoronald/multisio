@@ -88,6 +88,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/jquery.easing-1.3.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/datatable/jquery.dataTables.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/smoothzoom/jquery.smoothzoom.js');
+    drupal_add_js(drupal_get_path('theme', 'simplecorp'). '/js/script-igp.js')
 
 
     //Initialize slideshow using theme settings
