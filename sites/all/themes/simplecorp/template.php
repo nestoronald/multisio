@@ -237,6 +237,9 @@ if (theme_get_setting('carousel_js','simplecorp')):
                             jQuery(".cboxPhoto").smoothZoom({width: "100%",  height: "100%"});
                         });
                     }
+                    if (jQuery(".views-field-field-imagen-gallery").length) {
+                        jQuery(".views-field-field-imagen-gallery").find("blockquote").remove();
+                    };
 
                 })();
             });
