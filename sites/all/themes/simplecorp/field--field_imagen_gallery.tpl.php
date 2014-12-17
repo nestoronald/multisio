@@ -6,6 +6,7 @@ foreach ($items as $key => $value) {
   ?>
   <div class="field-item"><?php print render($value); ?>
   <span class="gallery_title"><?php print($value['#item']['title']); ?></span>
+  <span class="gallery_caption none"><?php print(strip_tags($value['#item']['image_field_caption']['value'])); ?></span>
   </div>
   <?php
 }

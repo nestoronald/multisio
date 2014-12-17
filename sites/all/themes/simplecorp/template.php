@@ -226,7 +226,13 @@ if (theme_get_setting('carousel_js','simplecorp')):
                         jQuery(this).html(\'<a href="\'+link+\'" target="_blank">\'+img+\'</a>\');
                     });
                     if (jQuery("a.colorbox").length) {
-                        jQuery("a.colorbox").colorbox({ opacity:0.5},function(){
+                        jQuery("a.colorbox").colorbox({ opacity:0.5,
+                            title: function(){
+                                caption = jQuery(this).siblings(".gallery_caption").html();
+                                if(caption!=""){return caption}
+                                else{return jQuery(this).find("img").attr("title")}
+                            }
+                        },function(){
                             //jQuery(".cboxPhoto").imageLens();
                             jQuery(".cboxPhoto").smoothZoom({width: "100%",  height: "100%"});
                         });
