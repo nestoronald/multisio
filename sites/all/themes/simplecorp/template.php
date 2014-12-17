@@ -62,10 +62,10 @@ if (theme_get_setting('slideshow_js','simplecorp')):
                 jQuery(this).addClass("slider-image");
                 titulo=jQuery(this).find("img").attr("title");
                 jQuery(this).after("<div class=\'flex-caption\'><h3>"+titulo+"</h3></div>");
-                console.log("titulo: "+titulo);
+                //console.log("titulo: "+titulo);
 		if (jQuery(".views-field-field-enlace-slider").eq(index).find(\'a\').length) {
                     href=jQuery(".views-field-field-enlace-slider").eq(index).find(\'a\').attr(\'href\');
-                    console.log("enlace: "+href);
+                    //console.log("enlace: "+href);
                 }
                 if (typeof(href)!="undefined"){
                     imagen = jQuery(this).find(".field-content").html();
