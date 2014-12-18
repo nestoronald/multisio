@@ -57,22 +57,20 @@ if (theme_get_setting('slideshow_js','simplecorp')):
             if (jQuery(".views-field-field-imagen-slider").length){
                  slider_tag= ".views-field-field-imagen-slider";
             }
-	    if(typeof(slider_tag)!="undefined"){
-	      jQuery(slider_tag).each(function(index){
-                jQuery(this).addClass("slider-image");
-                titulo=jQuery(this).find("img").attr("title");
-                jQuery(this).after("<div class=\'flex-caption\'><h3>"+titulo+"</h3></div>");
-                //console.log("titulo: "+titulo);
-		if (jQuery(".views-field-field-enlace-slider").eq(index).find(\'a\').length) {
+    	    if(typeof(slider_tag)!="undefined"){
+    	        jQuery(slider_tag).each(function(index){
+                    jQuery(this).addClass("slider-image");
+                    titulo=jQuery(this).find("img").attr("title");
+                    jQuery(this).after("<div class=\'flex-caption\'><h3>"+titulo+"</h3></div>");
+                    //console.log("titulo: "+titulo);
                     href=jQuery(".views-field-field-enlace-slider").eq(index).find(\'a\').attr(\'href\');
-                    //console.log("enlace: "+href);
-                }
-                if (typeof(href)!="undefined"){
-                    imagen = jQuery(this).find(".field-content").html();
-                    jQuery(this).html("<a target= \'_blank\' href="+href+">"+imagen+"</a>");
-                }
-              });
-	    }
+                    console.log("enlace:  "+titulo+href);
+                    if (typeof(href)!="undefined"){
+                        imagen = jQuery(this).find(".field-content").html();
+                        jQuery(this).html("<a target= \'_blank\' href="+href+">"+imagen+"</a>");
+                    }
+                });
+    	    }
 
         });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
     );
