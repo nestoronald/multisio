@@ -64,7 +64,7 @@ if (theme_get_setting('slideshow_js','simplecorp')):
                     jQuery(this).after("<div class=\'flex-caption\'><h3>"+titulo+"</h3></div>");
                     //console.log("titulo: "+titulo);
                     href=jQuery(".views-field-field-enlace-slider").eq(index).find(\'a\').attr(\'href\');
-                    console.log("enlace:  "+titulo+href);
+                    //console.log("enlace:  "+titulo+href);
                     if (typeof(href)!="undefined"){
                         imagen = jQuery(this).find(".field-content").html();
                         jQuery(this).html("<a target= \'_blank\' href="+href+">"+imagen+"</a>");
