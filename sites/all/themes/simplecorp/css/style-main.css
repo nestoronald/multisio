@@ -269,3 +269,7 @@ body .gallery-igp li:hover {
 #footer-bottom, #footer-bottom ul.menu li a {
 	color: #ccc;
 }
+#main-content .pdf {
+    padding: 15px 10px 10px 20px;
+    width: auto;
+}
