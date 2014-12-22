@@ -278,10 +278,10 @@ body .gallery-igp li:hover {
     display: none;
 }
 .views-slideshow-controls-text-previous:hover{
-    border-right: 15px solid rgba(157, 206, 223, 0.9);
+    border-right: 12px solid rgba(157, 206, 223, 0.9);
 }
 .views-slideshow-controls-text-next:hover{
-    border-left: 15px solid rgba(157, 206, 223, 0.9);
+    border-left: 12px solid rgba(157, 206, 223, 0.9);
 }
 .views-slideshow-controls-text-previous, .views-slideshow-controls-text-next{
     display: block;
@@ -289,8 +289,8 @@ body .gallery-igp li:hover {
     width: 0;
     height: 0;
     bottom: 55%;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
     border-radius: 3px;
     cursor: pointer;
     z-index: 1000;
@@ -298,12 +298,13 @@ body .gallery-igp li:hover {
 .views-slideshow-controls-text-previous {
     /*background-position:35px,-50px;; */
     left: 10px;
-    border-right: 15px solid rgba(255,255,255,0.5);
+    border-right: 12px solid rgba(255,255,255,0.5);
 }
 .views-slideshow-controls-text-next {
     right: 10px;
-    border-left: 15px solid rgba(255,255,255,0.5);
+    border-left: 12px solid rgba(255,255,255,0.5);
 }
+/*counter*/
 .views-slideshow-pager-field-item .views-field-counter{
     float: left;
 }
