@@ -333,4 +333,7 @@ body .gallery-igp li:hover {
 #views_slideshow_controls_text_pause_slideshow-block{
     display: none;
 }
+.skin-default{
+    position: relative;
+}
 /*fin slideshow nav*/
