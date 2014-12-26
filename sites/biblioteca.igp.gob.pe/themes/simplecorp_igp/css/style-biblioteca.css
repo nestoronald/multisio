@@ -1,11 +1,11 @@
 .flex-caption {
 	padding: 1% 3% !important;
 }
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+/*@media only screen and (min-width: 768px) and (max-width: 959px) {
 	.views_slideshow_cycle_main {
 	height: 155px !important;
 	}
-}
+}*/
 body .view-features-articles .views-row {
 	width: 88%;
 	height: 215px;
