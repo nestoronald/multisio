@@ -293,7 +293,7 @@ body .gallery-igp li:hover {
     border-bottom: 12px solid transparent;
     border-radius: 3px;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 4;
 }
 .views-slideshow-controls-text-previous {
     /*background-position:35px,-50px;; */
@@ -328,7 +328,7 @@ body .gallery-igp li:hover {
     bottom: 15%;
     width: 70px;
     right: 0;
-    z-index: 999;
+    z-index: 4;
 }
 #views_slideshow_controls_text_pause_slideshow-block{
     display: none;
@@ -337,3 +337,18 @@ body .gallery-igp li:hover {
     position: relative;
 }
 /*fin slideshow nav*/
+
+/* Calendario */
+.sidebar .block .content li{
+	background: none;
+}
+.calendar-calendar .month {
+	color: inherit;
+}
+.calendar-calendar tr td.today{
+	border-radius: 50%;
+	color: #fff;
+}
+.calendar-calendar td {
+	text-align: center;
+}
