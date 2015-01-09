@@ -1,8 +1,5 @@
 (function ($){
-	 //<![CDATA[
-    <!-- Begin
-
-    document.oncontextmenu = function(){
+    document.oncontextmenu = function(e){
         if (!e) var e = window.event;
         var tg = (window.event) ? e.srcElement : e.target;
 
@@ -10,8 +7,7 @@
             e.preventDefault();
         }
     }
-    // End -->
-    //]]>
+
 })(jQuery);
 
 
@@ -25,4 +21,10 @@
 //             e.preventDefault();
 //         }
 //     });
+// });
+
+//v2
+// $('img').bind("contextmenu", function () {
+//                 alert("Right click not allowed");
+//                 return false;
 // });

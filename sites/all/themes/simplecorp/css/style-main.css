@@ -352,3 +352,9 @@ body .gallery-igp li:hover {
 .calendar-calendar td {
 	text-align: center;
 }
+.calendar-calendar tr td.today.date-box {
+	color: inherit;
+}
+.calendar-calendar .year{
+	color: inherit;
+}
