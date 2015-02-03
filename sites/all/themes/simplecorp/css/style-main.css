@@ -359,5 +359,5 @@ body .gallery-igp li:hover {
 	color: inherit;
 }
 #imce-content input.form-submit, #imce-content input[type="submit"], #imce-content button {
-	background: none !important;
+	background: green !important;
 }
