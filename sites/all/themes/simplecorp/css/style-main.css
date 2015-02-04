@@ -358,6 +358,7 @@ body .gallery-igp li:hover {
 .calendar-calendar .year{
 	color: inherit;
 }
+/*disable error message temparal*/
 .messages.error {
-	display: none;
+	display: none !important;
 }
