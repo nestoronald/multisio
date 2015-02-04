@@ -358,6 +358,3 @@ body .gallery-igp li:hover {
 .calendar-calendar .year{
 	color: inherit;
 }
-#imce-content input.form-submit, #imce-content input[type="submit"], #imce-content button {
-	background: green !important;
-}
