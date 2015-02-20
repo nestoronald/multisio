@@ -33,7 +33,7 @@
         </header>
         <!-- EOF: header -->
 
-        <div id="content" class="clearfix">
+        <div id="content" class="clearfix container-1 ">
 
             <?php if ($page['top_content']): ?>
             <!-- #top-content -->

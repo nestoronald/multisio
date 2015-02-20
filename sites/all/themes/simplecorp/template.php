@@ -71,6 +71,9 @@ if (theme_get_setting('slideshow_js','simplecorp')):
                     }
                 });
     	    }
+            if(typeof("#jquery-countdown-timer")!="undefined"){
+                jQuery("#jquery-countdown-timer").after("<div class=\'jquery-countdown-timer-note\' > <span>días</span> | <span>horas</span> | <span>min</span> | <span>seg</span></div>");
+            }
 
         });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
     );

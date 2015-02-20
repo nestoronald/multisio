@@ -215,13 +215,13 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => 'db_cndg',
+      'database' => 'db_vulcanologia',
       'username' => 'wmaster',
       'password' => 'igpwmaster',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
-      'prefix' => 'igp_',
+      'prefix' => '',
     ),
   ),
 );
