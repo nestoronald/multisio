@@ -215,7 +215,7 @@ $databases = array (
   array (
     'default' =>
     array (
-      'database' => 'db_vulcanologia',
+      'database' => 'db_cndg',
       'username' => 'wmaster',
       'password' => 'igpwmaster',
       'host' => 'localhost',
@@ -225,7 +225,7 @@ $databases = array (
     ),
   ),
 );
-ini_set('error_reporting', 'E_ALL ^ E_NOTICE');
+
 /**
  * Access control for update.php script.
  *
@@ -256,7 +256,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = '45DxWNqrbu4DittNEa3VoAp-rwKRxrSiPA6yJDBFEpk';
+$drupal_hash_salt = 'vp4CvY0RTqP3u9hX2ujwhrGwMaZY5uQF7A5hJDC7BBc';
 
 /**
  * Base URL (optional).
