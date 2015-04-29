@@ -620,6 +620,20 @@ function simplecorp_preprocess_html(&$vars) {
     $vars['rdf']->namespaces = '';
     $vars['rdf']->profile = '';
     }
+    
+// This function looks for node 1 and only adds the javascript for this.
+// However it can be extended in different ways if required
+    drupal_add_library('system', 'ui.tabs');
+    drupal_add_js('jQuery(document).ready(function(){
+                jQuery("#tabs").tabs({event: "mouseover"});
+                jQuery("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+                jQuery("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+            });',
+        'inline');
+    
+    
+    
 }
+    
 
 ?>
