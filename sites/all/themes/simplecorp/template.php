@@ -88,6 +88,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/plugins/jquery.jcarousel.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/jquery.easing-1.3.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/datatable/jquery.dataTables.min.js');
+    drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/datatable/dataTables.tableTools.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/smoothzoom/jquery.smoothzoom.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp'). '/js/script-igp.js');
 
@@ -95,7 +96,8 @@ if (theme_get_setting('carousel_js','simplecorp')):
     //Initialize slideshow using theme settings
     $carousel_effect_time=theme_get_setting('carousel_effect_time','simplecorp')*1000;
     $carousel_effect=theme_get_setting('carousel_effect','simplecorp');
-
+    $dir = drupal_get_path('theme', 'simplecorp');
+    // $dir .="/js/datatable/swf/copy_csv_xls_pdf.swf";
     drupal_add_js('
         jQuery(document).ready(function($) {
             jQuery("#tb_anexos").dataTable({
@@ -117,10 +119,16 @@ if (theme_get_setting('carousel_js','simplecorp')):
                     "sLoadingRecords": "Cargando...",
                     "oPaginate": {
                             "sFirst":    "Primero",
-                            "sLast":     "Último",
+                            "sLast":     "Ultimo",
                             "sNext":     ">",
                             "sPrevious": "<"
                     },
+
+                    dom: \'T<"clear">lfrtip\',
+                    tableTools: {
+                        "sSwfPath": "'.$dir.'/js/datatable/swf/copy_csv_xls_pdf.swf"
+                    },
+
                     "oAria": {
                             "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
                             "sSortDescending": ": Activar para ordenar la columna de manera descendente"
@@ -137,7 +145,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
                 "bPaginate": true,
                 "sPaginationType": "full_numbers",
                 "iDisplayLength": 20,
-		"bSort": false,
+		        "bSort": false,
                 "oLanguage": {
                     "sProcessing":     "Procesando...",
                     "sLengthMenu":     "Mostrar _MENU_ registros",
@@ -620,7 +628,7 @@ function simplecorp_preprocess_html(&$vars) {
     $vars['rdf']->namespaces = '';
     $vars['rdf']->profile = '';
     }
-    
+
 // This function looks for node 1 and only adds the javascript for this.
 // However it can be extended in different ways if required
     drupal_add_library('system', 'ui.tabs');
@@ -630,10 +638,10 @@ function simplecorp_preprocess_html(&$vars) {
                 jQuery("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
             });',
         'inline');
-    
-    
-    
+
+
+
 }
-    
+
 
 ?>
