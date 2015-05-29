@@ -75,7 +75,7 @@ if (theme_get_setting('slideshow_js','simplecorp')):
                 jQuery("#jquery-countdown-timer").after("<div class=\'jquery-countdown-timer-note\' > <span>días</span> | <span>horas</span> | <span>min</span> | <span>seg</span></div>");
             }
             if(typeof("#node-119")!="undefined"){
-                jQuery("#node-119 .field-items ul").addClass("galley-igp");
+                jQuery("#node-119 .field-items ul").addClass("gallery-igp");
             }
 
         });',array('type' => 'inline', 'scope' => 'footer', 'weight' => 5)
