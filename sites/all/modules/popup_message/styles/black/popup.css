@@ -17,10 +17,10 @@
   _position: absolute; /* hack for internet explorer 6*/
   overflow: auto;
   background: #ffffff;
-  border: 10px solid #000000;
+  /*border: 10px solid #000000;*/
   border-radius: 10px 10px 10px 10px;
   z-index: 200;
-  padding: 12px;
+  /*padding: 12px;*/
   font-size: 13px;
 }
 
