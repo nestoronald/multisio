@@ -361,3 +361,6 @@ body .gallery-igp li:hover {
 .messages.error {
 	display: none !important;
 }
+.popup-message-title{
+    display: none;
+}
