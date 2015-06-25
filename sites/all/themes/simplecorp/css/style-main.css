@@ -61,7 +61,7 @@
     margin: 0 0.3em 1em 1em;
 }
 .view-features-articles .views-field-title a {
-    color: #40b4e3;
+    color: #38B5E6;
     font-size: 24px;
     line-height: 26px;
     font-family:'Dosis',Arial,Verdana,serif;
@@ -74,7 +74,7 @@
 
 /*social icons*/
 #social-icons, #block-views-redes-sociales-block {
-    background: #9dcedf;
+    background: #38B5E6;
     margin-bottom: 10px;
     display:block;
     clear:both;
@@ -181,7 +181,7 @@ top: 50%;
 margin-top: -8px;
 }
 .menu .leaf a.active{
-  color:#9DCEDF;
+  color:#38B5E6;
 }
 
 /*slidershow href*/
@@ -320,7 +320,7 @@ body .gallery-igp li:hover {
     text-indent: -9999px;
 }
 .views-slideshow-pager-fields .active .views-content-counter{
-    background-color: #9dcedf;
+    background-color: #38B5E6;
 }
 .views-slideshow-pager-fields{
     position: absolute;
