@@ -329,7 +329,7 @@ body .gallery-igp li:hover {
     right: 0;
     z-index: 35;
 }
-#views_slideshow_controls_text_pause_slideshow-block{
+#views_slideshow_controls_text_pause_slideshow-block, .views-slideshow-controls-text-pause.views_slideshow_controls_text_pause{
     display: none;
 }
 .skin-default{
