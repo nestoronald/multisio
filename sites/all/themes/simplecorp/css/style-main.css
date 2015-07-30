@@ -335,6 +335,9 @@ body .gallery-igp li:hover {
 .skin-default{
     position: relative;
 }
+.views-slideshow-pager-fields {
+bottom: 13px !important;
+}
 /*fin slideshow nav*/
 
 /* Calendario */
@@ -364,3 +367,4 @@ body .gallery-igp li:hover {
 .popup-message-title{
     display: none;
 }
+
