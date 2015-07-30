@@ -292,7 +292,7 @@ body .gallery-igp li:hover {
     border-bottom: 12px solid transparent;
     border-radius: 3px;
     cursor: pointer;
-    z-index: 4;
+    z-index: 15;
 }
 .views-slideshow-controls-text-previous {
     /*background-position:35px,-50px;; */
@@ -327,7 +327,7 @@ body .gallery-igp li:hover {
     bottom: 15%;
     width: 70px;
     right: 0;
-    z-index: 4;
+    z-index: 15;
 }
 #views_slideshow_controls_text_pause_slideshow-block{
     display: none;
