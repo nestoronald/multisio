@@ -371,3 +371,6 @@ bottom: 13px !important;
 #footer {
     color: #aaa;
 }
+#footer h4 a, #footer h2 a {
+    color: #38B5E6;
+}
