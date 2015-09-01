@@ -268,15 +268,18 @@
             <?php endif; ?>
 
             <!-- #footer-bottom -->
+            <!-- #footer-bottom -->
             <div id="footer-bottom">
                 <div class="container clearfix">
                     <span class="right"><a class="backtotop" href="#">↑</a></span>
-                    <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('class' => array('menu', 'secondary-menu', 'links', 'clearfix')))); ?>
-                    <?php if ($user->uid){
+                    <?php //print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('class' => array('menu', 'secondary-menu', 'links', 'clearfix')))); ?>
+                    <?php 
+                    /*
+                    if ($user->uid){
                     }
                     else{
                         print "<a href='?q=user' title='Clic aqui para iniciar sesión'>Iniciar sesión</a>";
-                    }
+                    }*/
                     ?>
 
                     <?php if ($page['footer']) :?>
@@ -286,18 +289,16 @@
                     <?php if (module_exists('i18n_menu')) {
                     $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
                     } else { $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu')); }
-                    print drupal_render($main_menu_tree); ?>
-
-                    <div class="credits">
-
-                    <p>Calle Badajoz # 169 - Mayorazgo IV Etapa - Ate Vitarte | Central Telefónica: 317-2300 |
-                        <a href="#" class="mostaza">Contacto </a>| Escríbenos a: <a href="mailto:web@igp.gob.pe" class="mostaza" rel="propover">web@igp.gob.pe</a>
-                    </p>
+                    //print drupal_render($main_menu_tree); ?>
+                   	<div class="credits"> 
+                    <center><p>Instituto Geofísico del Perú  - Oficina Regional de Huancayo | 
+                        <a href="http://test.igp.gob.pe/ohy/?q=datos-de-contacto" class="mostaza">Contacto </a>| Escríbenos a: <a href="mailto:web@igp.gob.pe" class="mostaza" rel="propover">web@igp.gob.pe</a> |  Observatorio de Huancayo 
+                    </p></center>
                     </div>
 
                 </div>
             </div>
-            <!-- EOF: #footer-bottom -->
+            <!-- EOF: #footer-bottom --> 
 
         </footer>
         <!-- EOF #footer -->
