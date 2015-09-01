@@ -16,9 +16,36 @@
       14- OTHER FEATURES LAYOUT (google maps,404 error style,pre style,blockquote style,team members,inner page intro...)
       15- DRUPAL STYLES OVERRIDE
 */
-@import url(http://fonts.googleapis.com/css?family=Dosis:200,400,500,700);
+/*@import url(http://fonts.googleapis.com/css?family=Dosis:200,400,500,700);*/
 
-
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 200;
+  /*src: local('Dosis ExtraLight'), local('Dosis-ExtraLight'), url(zuuDDmIlQfJeEM3Uf6kkpvesZW2xOQ-xsNqO47m55DA.woff) format('woff');*/
+  src: url(fonts/dosis/zuuDDmIlQfJeEM3Uf6kkpvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 400;
+  /*src: local('Dosis Regular'), local('Dosis-Regular'), url(xIAtSaglM8LZOYdGmG1JqQ.woff) format('woff');*/
+  src: url(fonts/dosis/xIAtSaglM8LZOYdGmG1JqQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 500;
+  /*src: local('Dosis Medium'), local('Dosis-Medium'), url(A4RWZsncmJ25G8iqn2EHN_esZW2xOQ-xsNqO47m55DA.woff) format('woff');*/
+  src: url(fonts/dosis/A4RWZsncmJ25G8iqn2EHN_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 700;
+  /*src: local('Dosis Bold'), local('Dosis-Bold'), url(x-7NZTw0n-ypOAaIE8uSrvesZW2xOQ-xsNqO47m55DA.woff) format('woff');*/
+  src: url(fonts/dosis/x-7NZTw0n-ypOAaIE8uSrvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
 
 /* ---------------------------------------------------------------------- */
 /* 01-   CLEARFIX
