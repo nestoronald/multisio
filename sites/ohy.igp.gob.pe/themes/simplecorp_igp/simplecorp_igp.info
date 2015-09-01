@@ -2,8 +2,7 @@ name = simplecorp_igp
 description = SimpleCorpIGP, theme for IGP.
 
 core = 7.x
-stylesheets[all][] = css/style-cndg.css
-stylesheets[all][] = css/style.css
+stylesheets[all][] = css/style-ohy.css
 regions[header] = Header
 regions[search] = Search
 regions[navigation] = Navigation
