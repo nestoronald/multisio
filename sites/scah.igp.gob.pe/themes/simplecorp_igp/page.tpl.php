@@ -291,7 +291,7 @@
                     <div class="credits">
 
                     <p>Calle Badajoz # 169 - Mayorazgo IV Etapa - Ate Vitarte | Central Telefónica: 317-2300 |
-                        <a href="#" class="mostaza">Contacto </a>| Escríbenos a: <a href="mailto:web@igp.gob.pe" class="mostaza" rel="propover">web@igp.gob.pe</a>
+                        <a href="#" class="mostaza">Contacto </a>| Escríbenos a: <a href="mailto:otidg_uis@igp.gob.pe" class="mostaza" rel="propover">otidg_uis@igp.gob.pe</a>
                     </p>
                     </div>
 
