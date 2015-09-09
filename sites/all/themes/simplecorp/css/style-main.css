@@ -95,7 +95,7 @@
 .nivo-caption p {
     font-size: 24px;
     line-height: 30px;
-    color: #9dcedf;
+    color: #40B4E3;
     font-weight: normal;
     font-variant: normal;
     white-space: normal;
@@ -124,7 +124,7 @@
     font-size: 12px;
 }
 .views-field-field-enlace a:hover{
-    background:#9dcedf;
+    background:#40B4E3;
 }
 /*fin-jcarosusel*/
 
@@ -170,7 +170,7 @@
     background: url("../images/caption-bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0)
 }
 .views_slideshow_cycle_main .views-field-title span.field-content {
-    color: #9DCEDF;
+    color: #40B4E3;
     margin: 0;
 }
 /*icon acordeon*/
@@ -190,7 +190,7 @@ margin-top: -8px;
     z-index: -999;
 }
 #page-wrapper .flex-caption a > * {
-   color:#9DCEDF;
+   color:#40B4E3;
 }
 #page-wrapper .views-field-field-imagen-slider, #page-wrapper .views-field-field-imagen-slider a {
    font-size: 0;
@@ -236,8 +236,8 @@ body .gallery-igp li, .content .gallery-igp li{
 body .gallery-igp li:hover {
 	border-radius: 3px;
 	background: #e7e7e7;
-	border: 1px solid #9dcedf;
-	box-shadow: 0 0 0 3px #9dcedf;
+	border: 1px solid #40B4E3;
+	box-shadow: 0 0 0 3px #40B4E3;
 }
 .field-name-field-imagen-gallery .field-item:hover{
 	-webkit-transform: rotate(0deg) scale(1.1);
@@ -247,7 +247,7 @@ body .gallery-igp li:hover {
 	transform: rotate(0deg) scale(1.1);
 }
 #main-content .gallery_title, .gallery_title a {
-	color: #9dcedf;
+	color: #40B4E3;
     text-align:center;
 }
 .gallery_title{
