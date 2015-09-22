@@ -13,6 +13,7 @@ stylesheets[all][] = css/plugins/flexslider.css
 stylesheets[all][] = css/local.css
 stylesheets[all][] = css/style-main.css
 stylesheets[all][] = css/demo_table_jui.css
+stylesheets[all][] = css/icons.css
 
 
 regions[header] = Header

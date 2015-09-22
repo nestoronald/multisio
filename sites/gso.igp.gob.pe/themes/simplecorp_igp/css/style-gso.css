@@ -1,0 +1,35 @@
+.view-features-articles .views-row { 
+  width: 43%; 
+}
+.views-field-field-imagen-1{
+	float:left;
+	margin:2px;	
+}
+ul.item-list-ultimas-desta> .ultimas-destacados > div:nth-child(1) {
+  background: #C8C8C8 none repeat scroll 0% 0%;
+  /*display: block;*/
+  margin: 2px;
+  padding: 2px;
+ float:left;
+}
+ul.item-list-ultimas-desta > .ultimas-destacados > div:nth-child(1):hover {
+  background: #40b4e3 none repeat scroll 0% 0%;
+  /*display: block;*/
+  margin: 2px;
+  padding: 2px;
+ /* opacity: 0.02; */
+  /*float:left;*/
+}
+ul.item-list-ultimas-desta > .ultimas-destacados > div:nth-child(3){
+  
+  clear:both;
+  
+}
+.item-list-ultimas-destacados > ul.item-list-ultimas-desta >  li.ultimas-destacados {  
+  padding: 5px 0 5px 0px;
+}
+.gso_destacados_title_1{position: absolute;margin-top: 50px;}
+.gso_destacados_title_2{position: absolute;	margin: 182px 0px 10px 150px}
+.gso_destacados_img_1{position: absolute;	margin: 4px 0px 10px 130px;}
+.gso_destacados_img_2{	position: absolute;	margin: 136px 0px 0px -9px;}
+ 
