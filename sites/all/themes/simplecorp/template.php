@@ -95,7 +95,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/smoothzoom/jquery.smoothzoom.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp'). '/js/script-igp.js');
     // drupal_add_js(drupal_get_path('theme', 'simplecorp'). '/js/main-google-maps.js');
-    drupal_add_js('https://maps.googleapis.com/maps/api/js?key=API_KEY&signed_in=true&callback=initMap');
+    drupal_add_js('http://maps.googleapis.com/maps/api/js?key=AIzaSyCv-HkyMengdYzR_9BzGhp10wceqjhVfKg&sensor=true');
 
 
     //Initialize slideshow using theme settings
