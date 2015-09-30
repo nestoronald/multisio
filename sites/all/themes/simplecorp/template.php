@@ -94,6 +94,7 @@ if (theme_get_setting('carousel_js','simplecorp')):
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/datatable/dataTables.tableTools.min.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp') . '/js/smoothzoom/jquery.smoothzoom.js');
     drupal_add_js(drupal_get_path('theme', 'simplecorp'). '/js/script-igp.js');
+    drupal_add_js(drupal_get_path('theme', 'simplecorp'). '/js/main-google-maps.js');
 
 
     //Initialize slideshow using theme settings
