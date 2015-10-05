@@ -26,36 +26,83 @@ jQuery(document).ready(function(){
 		  jQuery(".views-row-"+licont+" > .views-field-created > .field-content ").html('<div class="submitted"><time class="date"><span class="month">'+month+' </span><strong class="dayigp">'+day+'</strong> <span class="year">'+ year+' </span></time></div>');
 		  licont++;
     });
+    
+		jQuery('.listadopersonas').change(function() {						
+			var textoFiltro = jQuery(".listadopersonas option:selected").val();
+			if(textoFiltro == 'todos') 
+			{
+				jQuery('.listado-persona-theme li.hidden').fadeIn('slow').removeClass('hidden');
+			}		
+			else
+			{				
+				jQuery('.listado-persona-theme li').each(function() {
+										
+					if(jQuery(this).attr('id')!=textoFiltro) 
+					{
+					
+						jQuery(this).fadeOut('normal').addClass('hidden');
+					}					
+					else 
+					{
+						jQuery(this).fadeIn('slow').removeClass('hidden');
+					}
+				});
+			}
+			
+			return false;
+		});
+		
+//--------------------
+ function initialize() {
+                var latlng = new google.maps.LatLng(-12.0550685,-76.9445515);
+                var settings = {
+                    zoom: 14,
+                    center: latlng,
+                    mapTypeControl: true,
+                    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+                    navigationControl: true,
+                    navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+                    mapTypeId: google.maps.MapTypeId.ROADMAP};
+                var map = new google.maps.Map(document.getElementById("map_canvas"), settings);
+                var contentString = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h3 id="firstHeading" class="firstHeading">Instituto Geofísico del Perú</h3>'+
+                    '<div id="bodyContent">'+
+                    '<p>Subdirección de Geofísica y Sociedad</p>'+
+                    '</div>'+
+                    '</div>';
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });                
+                var companyImage = new google.maps.MarkerImage('http://gso.igp.gob.pe/sites/gso.igp.gob.pe/files/public/visit_logo.png',
+                    new google.maps.Size(71,92),
+                    new google.maps.Point(0,0),
+                    new google.maps.Point(36,80)
+                );
+                var companyShadow = new google.maps.MarkerImage('http://gso.igp.gob.pe/sites/gso.igp.gob.pe/files/public/visit_logo_shadow.png',
+                    new google.maps.Size(76,53),
+                    new google.maps.Point(0,0),
+                    new google.maps.Point(17,38));
+                var companyPos = new google.maps.LatLng(-12.0550685,-76.9445515);
+                var companyMarker = new google.maps.Marker({
+                    position: companyPos,
+                    map: map,
+                    icon: companyImage,
+                    shadow: companyShadow,
+                    title: "Juega con el ZOOM",
+                    zIndex: 3});
+                    
+                google.maps.event.addListener(companyMarker, 'click', function() {
+                    infowindow.open(map,companyMarker);
+                });
+            }
+            window.onload=initialize
 
-    /*
-	var bgpar1=0;
-    var bgpar2=0;
-    var degree=0;
-    jQuery(".field-item >img").each(function(i){
-        degree=Math.random()*-20;
-        mclass=(i%2==0)?"img_collage_1":"img_collage_2";
-        jQuery(this).addClass(mclass);
-        var width = getRandomSize(100,  200);
-        var height =  getRandomSize(100, 200);
-        jQuery(this).css('height',height)
-        jQuery(this).css('width',width)
 
 
-    });
-
-
-    function getRandomSize(min, max) {
-      return Math.round(Math.random() * (max - min) + min);
-    }
-
-    var link='/scts_master/?q=notas-prensa';
-    var title='Noticias';
-	var url='test.igp.gob.pe/scts_master';
-    jQuery("ul.contenido-destacado").append('<li class="views-row views-row-4 views-row-even"><div class="views-field views-field-title"><span class="field-content"><a href="'+link+'">'+title+'</a></span>  </div><div class="views-field views-field-field-imagen"><div class="field-content"><a href="/?q='+link+'"><img typeof="foaf:Image" src="http://'+url+'/sites/scts.igp.gob.pe/files/styles/large/public/geodinamica_unnamed1.jpg?itok=Z4FsyggY" alt="" height="360" width="480"></a></div>  </div></li>');*/
 });
-
-
-
+ 
 
 
 
