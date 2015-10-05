@@ -53,7 +53,7 @@
 .view-features-articles .views-row {
     background: #ededed;
     border-radius: 6px;
-    width: 42%;
+    width: 28%;
     padding: 0.7em 0.9em 0.3em;
     /*height: 245px;*/
     height: 270px;
@@ -305,7 +305,7 @@ body .gallery-igp li:hover {
 }
 /*counter*/
 .views-slideshow-pager-field-item .views-field-counter{
-    float: left;
+    float: right;
 }
 .views-slideshow-pager-field-item .views-content-counter {
     height: 10px;
@@ -326,8 +326,9 @@ body .gallery-igp li:hover {
     position: absolute;
     bottom: 15%;
     width: 200px;
-    right: 0;
+    right: 10px;
     z-index: 35;
+     
 }
 #views_slideshow_controls_text_pause_slideshow-block, .views-slideshow-controls-text-pause.views_slideshow_controls_text_pause{
     display: none;
@@ -442,19 +443,7 @@ ul.list-notice-format > .row-notice-format > div:nth-child(4) {
 .list-notice-format .date .month{
 	font-size:11px;	
 }
-/* Style List Personal admin */
-
-/*.row-flow-img-people p{  margin: 0;  padding: 0;  border: 0; vertical-align: baseline;font-size: 10px;}
-.row-flow-img-people{width: 22%;position: relative;min-height: 1px;padding-left: 10px;padding-right: 10px; margin-bottom:18px;}
-.row-flow-img-people article{  background: rgb(241, 244, 245);}
-.row-flow-img-people .name{  color: #16222D;font-size: 15px;  line-height: 0.9;  font-weight: 400;  text-align: center;  height: 45px;}
-.row-flow-img-people  .info{  padding: 0px 10px;}
-.row-flow-img-people img{  width: 100%;  height: 162px;}
-.Person-Img{ overflow: hidden; height: auto; background-color: white;  padding: 10px;  -webkit-box-shadow: inset 0 0 1px #666;  -moz-box-shadow: inset 0 0 1px #666;  box-shadow: inset 0 0 1px #666; margin-bottom:10px; position:relative;overflow: hidden;}
-.Person-Img:hover .overlay{	 opacity:0.2; filter: alpha(opacity=40); visibility: visible;	  -webkit-transition: all 0.3s ease-in-out;	   -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; 	   box-shadow: 0 0 5px #000;   }
-.Person-Img .overlay{ position: absolute; top: 0; right: 0; opacity: 0; visibility: hidden; width: 100%; height: 100%; background-color: #FFFFFF; }
-*/
-/* New Slyle People List*/
+/* Estilo para la lista de personal */
 .listado-persona-theme > .lista-personas-row{height: 346px;list-style-type: none;  width: 22%;float:left;  
   margin:0px 0px 10px 10px; background: #F1F4F5 none repeat scroll 0% 0%;border: 1px solid #F1F4F5; border-bottom:8px solid #C8C8C8;}
 .listado-persona-theme > .lista-personas-row:hover{  border: 1px solid rgb(64, 180, 227);  border-bottom: 8px solid rgb(64, 180, 227);}
@@ -466,4 +455,9 @@ ul.list-notice-format > .row-notice-format > div:nth-child(4) {
 .listado-persona-theme > .lista-personas-row > div:nth-child(2) h2 { 	color: #16222D;	font-size: 18px; 	text-align: center;	margin:5px 0px 0px 0px;	padding:2px; height: 38px;line-height: 1;}
 .listado-persona-theme > .lista-personas-row > div > p {line-height:1;margin: 0px;padding: 0px;border: 0px none;vertical-align: baseline;font-size: 10px;}
 .listado-persona-theme > .lista-personas-row > div > p >  i {margin:0px 0px 0px 5px;}
-
+/* Estilo  de 2 columnas para los destacados. */
+.view-features-articles .igp-list .views-row {
+  width: 42%;
+}
+/* Alineacion de botones del banner o slider de inicio*/
+ 
